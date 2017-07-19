@@ -11,4 +11,6 @@ package br.edu.unifei.eco.tfg.gamification.model;
  */
 public class MainQuest extends Quest {
     
+    private int chapter;        //capitulo da mainquest 
+    
 }

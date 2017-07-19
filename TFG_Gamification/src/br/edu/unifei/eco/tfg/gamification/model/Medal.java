@@ -9,8 +9,6 @@ package br.edu.unifei.eco.tfg.gamification.model;
  *
  * @author Paulo
  */
-public class SideQuest extends Quest {
+public class Medal extends Reward{
     
-    private Player creator;             //criador da SQ
-    private Party participatingPartys;  //partys que estao participando da SQ
 }
