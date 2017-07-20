@@ -9,8 +9,10 @@ package br.edu.unifei.eco.tfg.gamification.model;
  *
  * @author Paulo
  */
-public class Frame extends Reward{
-    
-    private String name;         //nome especifico do item
+public enum PrivilegeEnum {
+    beginer,
+    experienced,
+    master,
+    creator
     
 }

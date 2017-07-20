@@ -11,4 +11,6 @@ package br.edu.unifei.eco.tfg.gamification.model;
  */
 public class Experience extends Reward{
     
+    private double amount;
+    
 }

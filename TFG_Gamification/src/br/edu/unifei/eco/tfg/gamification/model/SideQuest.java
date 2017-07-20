@@ -13,4 +13,22 @@ public class SideQuest extends Quest {
     
     private Player creator;             //criador da SQ
     private Party participatingPartys;  //partys que estao participando da SQ
+
+    public Player getCreator() {
+        return creator;
+    }
+
+    public void setCreator(Player creator) {
+        this.creator = creator;
+    }
+
+    public Party getParticipatingPartys() {
+        return participatingPartys;
+    }
+
+    public void setParticipatingPartys(Party participatingPartys) {
+        this.participatingPartys = participatingPartys;
+    }
+    
+    
 }

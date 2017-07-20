@@ -9,26 +9,25 @@ package br.edu.unifei.eco.tfg.gamification.model;
  *
  * @author Paulo
  */
-public abstract class Reward {
+public abstract class Group {
     
-    private String description;        //descriçao da recompensa
-    private String rarity;             //raridade da recompensa
+    private String name;                    //nome do grupo
+    private String description;             //breve descriçao do grupo
 
-   
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public String getDescription() {
         return description;
     }
 
     public void setDescription(String description) {
         this.description = description;
-    }
-     
-    public String getRarity() {
-        return rarity;
-    }
-
-    public void setRarity(String rarity) {
-        this.rarity = rarity;
     }
     
     

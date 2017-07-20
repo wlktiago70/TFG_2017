@@ -15,18 +15,21 @@ import java.util.List;
  */
 public class Player {
     
-    private String name;                                                        //nome do usuario
-    private float experience;                                                   //quantidade de xp que o usuario possui
-    private float reputation;                                                   //reputaçao que usuario adiquiriu ao criar SQ e Party
-    private UserPerformnce performance;                                         //a performance geral do jogador
-    private List<Player> friends = new ArrayList<Player>();                     //lista de amigos
-    private List<Quest> questsJoined = new ArrayList<Quest>();                  //quests ativas para o usuario(num max definido pelos privilegios)
-    private List<SideQuest> createdSQ = new ArrayList<SideQuest>();             //as quests que o player criou
-    private List<Party> createdPaties = new ArrayList<Party>();                 //as partys que o player criou
+    private String name;                                                    //nome do usuario
+    private int level;                                                      //lvl do player
+    private float experience;                                               //quantidade de xp que o usuario possui
+    private float reputation;                                               //reputaçao que usuario adiquiriu ao criar SQ e Party
+    private UserPerformnce performance;                                     //a performance geral do jogador
+    private List<Player> friends = new ArrayList<Player>();                 //lista de amigos
+    private List<Quest> questsJoined = new ArrayList<Quest>();              //quests ativas para o usuario(num max definido pelos privilegios)
+    private List<SideQuest> createdSQ = new ArrayList<SideQuest>();         //as quests que o player criou
+    private List<Party> createdPaties = new ArrayList<Party>();             //as partys que o player criou
+    private List<Party> parties = new ArrayList<Party>();                   //lista de equipes que o jogador participa
     
-    private List<Privilege> privileges = new ArrayList<Privilege>();            //privilegios do jogador no jogo
-    private List<Achievement> achievements = new ArrayList<Achievement>();      //conquistas que o jogador obteve
-    //private List<Group> groups = new ArrayList<Group>();                        //acho que ta errado
+    private Clan clan;                                                              //clan do jogador
+    private PrivilegeEnum privileges;                                               //privilegios do jogador no jogo
+    private List<AchievementEnum> achievements = new ArrayList<AchievementEnum>();  //conquistas que o jogador obteve
+    
 
     
     public String getName() {
@@ -37,6 +40,14 @@ public class Player {
         this.name = name;
     }
 
+    public int getLevel() {
+        return level;
+    }
+
+    public void setLevel(int level) {
+        this.level = level;
+    }
+    
     public float getExperience() {
         return experience;
     }
@@ -93,19 +104,35 @@ public class Player {
         this.createdPaties = createdPaties;
     }
 
-    public List<Privilege> getPrivileges() {
+    public List<Party> getParties() {
+        return parties;
+    }
+
+    public void setParties(List<Party> parties) {
+        this.parties = parties;
+    }
+
+    public Clan getClan() {
+        return clan;
+    }
+
+    public void setClan(Clan clan) {
+        this.clan = clan;
+    }
+
+    public PrivilegeEnum getPrivileges() {
         return privileges;
     }
 
-    public void setPrivileges(List<Privilege> privileges) {
+    public void setPrivileges(PrivilegeEnum privileges) {
         this.privileges = privileges;
     }
-
-    public List<Achievement> getAchievements() {
+    
+    public List<AchievementEnum> getAchievements() {
         return achievements;
     }
 
-    public void setAchievements(List<Achievement> achievements) {
+    public void setAchievements(List<AchievementEnum> achievements) {
         this.achievements = achievements;
     }
     

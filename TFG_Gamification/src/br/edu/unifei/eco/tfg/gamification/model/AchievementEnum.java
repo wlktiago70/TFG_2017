@@ -9,8 +9,17 @@ package br.edu.unifei.eco.tfg.gamification.model;
  *
  * @author Paulo
  */
-public class Frame extends Reward{
+public enum AchievementEnum {
     
-    private String name;         //nome especifico do item
+    reachLevel05,
+    reachLevel10,
+    reachLevel15,
+    reachLevel20,
+    reachLevel25,
+    reachLevel30,
+    reachLevel35,
+    reachLevel40,
+    reachLevel45,
+    reachLevel50
     
 }

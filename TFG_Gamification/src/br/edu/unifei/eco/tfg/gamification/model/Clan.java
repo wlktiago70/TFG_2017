@@ -5,12 +5,15 @@
  */
 package br.edu.unifei.eco.tfg.gamification.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author Paulo
  */
-public class Frame extends Reward{
+public class Clan extends Group {
     
-    private String name;         //nome especifico do item
+    private List<Player> members = new ArrayList<Player>();
     
 }

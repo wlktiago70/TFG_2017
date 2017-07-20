@@ -12,5 +12,24 @@ package br.edu.unifei.eco.tfg.gamification.model;
 public abstract class Goal {
     
     private String description;         //descricao do objetivo
+    private boolean finished;           //indica se a meta foi cumprida
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public boolean isFinished() {
+        return finished;
+    }
+
+    public void setFinished(boolean finished) {
+        this.finished = finished;
+    }
+    
+    
     
 }
