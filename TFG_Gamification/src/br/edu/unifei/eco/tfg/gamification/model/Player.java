@@ -19,7 +19,7 @@ public class Player {
     private int level;                                                      //lvl do player
     private float experience;                                               //quantidade de xp que o usuario possui
     private float reputation;                                               //reputaçao que usuario adiquiriu ao criar SQ e Party
-    private UserPerformnce performance;                                     //a performance geral do jogador
+    private PlayerPerformance performance;                                     //a performance geral do jogador
     private List<Player> friends = new ArrayList<Player>();                 //lista de amigos
     private List<Quest> questsJoined = new ArrayList<Quest>();              //quests ativas para o usuario(num max definido pelos privilegios)
     private List<SideQuest> createdSQ = new ArrayList<SideQuest>();         //as quests que o player criou
@@ -64,11 +64,11 @@ public class Player {
         this.reputation = reputation;
     }
 
-    public UserPerformnce getPerformance() {
+    public PlayerPerformance getPerformance() {
         return performance;
     }
 
-    public void setPerformance(UserPerformnce performance) {
+    public void setPerformance(PlayerPerformance performance) {
         this.performance = performance;
     }
 
