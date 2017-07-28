@@ -34,7 +34,7 @@ public class Login extends Form{
     public Login() throws IOException{
         super("Welcome", new FlowLayout(Component.CENTER));
         btnStart.setUIID("GreenButton");
-        this.icon = new Label(Image.createImage("/taichi.png"));        
+        this.icon = new Label(Image.createImage("/img.png").scaled(150,150));        
         this.add(icon);
         cnt.add(lblUser);
         cnt.add(txfUser);
