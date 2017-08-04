@@ -19,7 +19,9 @@ public class Player {
     private int level;                                                      //lvl do player
     private float experience;                                               //quantidade de xp que o usuario possui
     private float reputation;                                               //reputaçao que usuario adiquiriu ao criar SQ e Party
-    private PlayerPerformance performance;                                     //a performance geral do jogador
+    private List<Reward> rewardsOwned;                                      //lista de recompensas conseguidas em Quests, menos exp(valor total adicionado em experience)
+    private List<Reward> rewardsAvailable;                                  //lista de recompensas desbloquadas para oferecer na SQ (incluindo quantidade fixa de xp - )
+    private PlayerPerformance performance;                                  //a performance geral do jogador
     private List<Player> friends = new ArrayList<Player>();                 //lista de amigos
     private List<Quest> questsJoined = new ArrayList<Quest>();              //quests ativas para o usuario(num max definido pelos privilegios)
     private List<SideQuest> createdSQ = new ArrayList<SideQuest>();         //as quests que o player criou
@@ -72,6 +74,22 @@ public class Player {
         this.performance = performance;
     }
 
+    public List<Reward> getRewardsOwned() {
+        return rewardsOwned;
+    }
+
+    public void setRewardsOwned(List<Reward> rewardsOwned) {
+        this.rewardsOwned = rewardsOwned;
+    }
+    
+    public List<Reward> getRewardsAvailable() {
+        return rewardsAvailable;
+    }
+
+    public void setRewardsAvailable(List<Reward> rewardsAvailable) {
+        this.rewardsAvailable = rewardsAvailable;
+    }
+        
     public List<Player> getFriends() {
         return friends;
     }
@@ -83,19 +101,37 @@ public class Player {
     public List<Quest> getQuestsJoined() {
         return questsJoined;
     }
-
+    /*
     public void setQuestsJoined(List<Quest> questsJoined) {
         this.questsJoined = questsJoined;
     }
-
+    */
+    public void addQuestsJoined(Quest quest) {
+        this.questsJoined.add(quest) ;
+        quest.addUsersEnlisted(this); 
+    }
+    
+    public void removeQuestsJoined(Quest quest) {
+        this.questsJoined.remove(quest) ;
+        quest.removeUsersEnlisted(this); 
+    }
+    
     public List<SideQuest> getCreatedSQ() {
         return createdSQ;
     }
-
+    /*
     public void setCreatedSQ(List<SideQuest> createdSQ) {
         this.createdSQ = createdSQ;
     }
-
+    */
+    public void addCreatedSQ(SideQuest sq) {
+        this.createdSQ.add(sq) ;
+    }
+    
+    public void removeCreatedSQ(SideQuest sq) {
+        this.createdSQ.remove(sq) ;
+    }
+    
     public List<Party> getCreatedPaties() {
         return createdPaties;
     }
@@ -136,6 +172,30 @@ public class Player {
         this.achievements = achievements;
     }
     
+    //atualiza o privilegio do jogador
+    public void updatePrivileges(){
+        
+        if (this.experience >= this.privileges.getNextPrivilege()){
+            switch (privileges){
+                case beginer:
+                    this.privileges = PrivilegeEnum.experienced;
+                    break;
+                case experienced:
+                    this.privileges = PrivilegeEnum.master;
+                    break;
+            }
+        }
+    }
+    
+    public boolean createSideQuest(){
+        
+        updatePrivileges();
+        //verificar as SQ criadas ativas - ou fazer elas se removerem da lista quando terminadas
+        
+        //criar a sq de acordo com as variaveis limitantes de criacao
+        return true;
+        
+    }
     
 
 }

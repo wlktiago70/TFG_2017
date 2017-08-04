@@ -11,6 +11,17 @@ package br.edu.unifei.eco.tfg.gamification.model;
  */
 public class Medal extends Reward{
     
-    private String name;         //nome especifico do item
+    private final String name;         //nome especifico do item
+
+    public Medal(String name, String description, int rarity) {
+        super(description, rarity);
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+    
+    
     
 }

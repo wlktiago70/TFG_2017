@@ -11,6 +11,17 @@ package br.edu.unifei.eco.tfg.gamification.model;
  */
 public class Experience extends Reward{
     
-    private double amount;
+    private final double amount;
+
+    public Experience(double amount) {
+        super("Recompensa padrão de missões", 0);
+        this.amount = amount;
+    }
+
+    public double getAmount() {
+        return amount;
+    }
+    
+    
     
 }

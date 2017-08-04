@@ -20,10 +20,20 @@ public abstract class Quest {
     private int visibility;                                         //visibilidade da quest (depende do numero de jogadores e da reputacao do criador nas SQ - sempre max nas MQ) 
     private List<Player> usersEnlisted = new ArrayList<Player>();   //lista de usuario que participam da missao    
     
-    private List<Goal> goals= new ArrayList<Goal>();            //lista de metas para a missao
-    private List<Reward> rewards= new ArrayList<Reward>();      //lista de recompensa para a missao
+    private List<Goal> goals = new ArrayList<Goal>();            //lista de metas para a missao
+    private List<Reward> rewards = new ArrayList<Reward>();      //lista de recompensa para a missao
 
     
+    public Quest(String name, String description, List<Goal> goals, List<Reward> rewards) {
+        this.name = name;
+        this.description = description;
+        this.goals = goals;
+        this.rewards = rewards;
+        
+        this.finished = false;
+    }
+    
+        
     public String getName() {
         return name;
     }
@@ -39,8 +49,16 @@ public abstract class Quest {
     public void setDescription(String description) {
         this.description = description;
     }
-
+    
+    //verifica se as goals estao completas e altera o estado da quest
     public boolean isFinished() {
+        for (Goal g : goals) {
+            
+            if (!g.isFinished()) return finished;
+            
+        }
+        
+        setFinished(true);
         return finished;
     }
 
@@ -59,11 +77,19 @@ public abstract class Quest {
     public List<Player> getUsersEnlisted() {
         return usersEnlisted;
     }
-
+    /*
     public void setUsersEnlisted(List<Player> usersEnlisted) {
         this.usersEnlisted = usersEnlisted;
     }
-
+    */
+    public void addUsersEnlisted(Player player) {
+        this.usersEnlisted.add(player);
+    }
+    
+    public void removeUsersEnlisted(Player player) {
+        this.usersEnlisted.remove(player);
+    }
+    
     public List<Goal> getGoals() {
         return goals;
     }

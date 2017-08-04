@@ -12,7 +12,14 @@ package br.edu.unifei.eco.tfg.gamification.model;
 public abstract class Reward {
     
     private String description;        //descriçao da recompensa
-    private String rarity;             //raridade da recompensa
+    private int rarity;                //raridade da recompensa 0=comum,1=incomum,2=rara
+
+
+
+    public Reward(String description, int rarity) {
+        this.description = description;
+        this.rarity = rarity;
+    }
 
    
     public String getDescription() {
@@ -23,11 +30,11 @@ public abstract class Reward {
         this.description = description;
     }
      
-    public String getRarity() {
+    public int getRarity() {
         return rarity;
     }
 
-    public void setRarity(String rarity) {
+    public void setRarity(int rarity) {
         this.rarity = rarity;
     }
     

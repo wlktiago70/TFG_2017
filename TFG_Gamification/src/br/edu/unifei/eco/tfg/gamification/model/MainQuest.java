@@ -5,6 +5,8 @@
  */
 package br.edu.unifei.eco.tfg.gamification.model;
 
+import java.util.List;
+
 /**
  *
  * @author Paulo
@@ -12,5 +14,18 @@ package br.edu.unifei.eco.tfg.gamification.model;
 public class MainQuest extends Quest {
     
     private int chapter;        //capitulo da mainquest 
+    
+    public MainQuest(int chapter, String name, String description, List<Goal> goals, List<Reward> rewards) {
+      
+        super(name, description, goals, rewards);
+        this.chapter = chapter;
+      
+    }
+
+    public int getChapter() {
+        return chapter;
+    }
+    
+    
     
 }

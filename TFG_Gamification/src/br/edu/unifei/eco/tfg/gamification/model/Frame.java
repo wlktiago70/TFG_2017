@@ -12,5 +12,16 @@ package br.edu.unifei.eco.tfg.gamification.model;
 public class Frame extends Reward{
     
     private String name;         //nome especifico do item
+
+    public Frame(String name, String description, int rarity) {
+        super(description, rarity);
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+    
+    
     
 }
