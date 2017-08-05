@@ -45,8 +45,7 @@ public class App {
             return;
         }
         try {
-            current = new Home("Wu Liang Kuan",100,Image.createImage("/4houses.jpg"),list);
-            //current = new Login();
+            current = new Login();
 //        Form hi = new Form("Welcome", new BorderLayout(BorderLayout.CENTER_BEHAVIOR_CENTER_ABSOLUTE));
 //        final Label apple = new Label(theme.getImage("apple-icon.png"));
 //        final Label android = new Label(theme.getImage("android-icon.png"));

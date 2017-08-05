@@ -5,6 +5,7 @@
  */
 package br.edu.unifei.eco.tfg.gamification.view;
 
+import br.edu.unifei.eco.tfg.gamification.control.LoginStartButtonListener;
 import com.codename1.ui.Button;
 import com.codename1.ui.Component;
 import com.codename1.ui.Container;
@@ -12,8 +13,6 @@ import com.codename1.ui.Form;
 import com.codename1.ui.Label;
 import com.codename1.ui.Image;
 import com.codename1.ui.TextField;
-import com.codename1.ui.events.ActionEvent;
-import com.codename1.ui.events.ActionListener;
 import com.codename1.ui.layouts.FlowLayout;
 import java.io.IOException;
 
@@ -27,7 +26,7 @@ public class Login extends Form{
     private final Label lblPassword = new Label("Password");
     private final TextField txfUser = new TextField("","Your e-mail",30,TextField.EMAILADDR);
     private final TextField txfPassword = new TextField("","Your password",30,TextField.PASSWORD);
-    private final Button btnStart = new Button("Let's Start!");
+    private final Button btnStart = new Button("Let's start!");
     private final Button btnSignUp = new Button("Sign up");
     private final Label icon;
     private boolean login = false;
@@ -42,12 +41,7 @@ public class Login extends Form{
         cnt.add(txfPassword);
         this.add(cnt);
         this.add(btnSignUp);
-        btnStart.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent evt) {
-                //Validate the login information
-            }
-        });
+        btnStart.addActionListener(new LoginStartButtonListener(this,txfUser.getText(),txfPassword.getText()));
         this.add(btnStart);
         this.show();
     }

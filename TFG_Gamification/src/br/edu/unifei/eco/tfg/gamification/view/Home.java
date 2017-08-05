@@ -29,6 +29,7 @@ import java.util.List;
  * @author User
  */
 public class Home extends Form{
+    private Form parentForm = null;
     private String userName;
     private int userScore;
     private Image userPhoto;
@@ -46,8 +47,9 @@ public class Home extends Form{
     private static Button btnMission = new Button("Missions");
     private static Button btnParty = new Button("Party");
     private static Image[] imgHouses = new Image[4];
-    public Home(String name, int score, Image photo, List<Image> achievements){
+    public Home(Form parent, String name, int score, Image photo, List<Image> achievements){
         super("Home", new BorderLayout());
+        parentForm = parent;
         configureToolbar();
         userName = name;
         userScore = score;
@@ -130,7 +132,10 @@ public class Home extends Form{
         //this.getToolbar().addCommandToRightBar("", FontImage.createMaterial(FontImage.MATERIAL_SEARCH, s), (e) -> Log.p("Clicked"));
         this.getToolbar().addCommandToRightBar("", FontImage.createMaterial(FontImage.MATERIAL_MORE_VERT, s), (e) -> Log.p("Clicked"));
         //this.getToolbar().addCommandToOverflowMenu("Overflow", null, (e) -> Log.p("Clicked"));
-        this.getToolbar().addCommandToSideMenu("Sidemenu", null, (e) -> Log.p("Clicked"));
+        this.getToolbar().addCommandToSideMenu("Logout", null, (e) -> parentForm.showBack());
         this.getToolbar().addSearchCommand(new SearchButtonListener(this), 3);
+    }
+    public Form getParentForm(){
+        return parentForm;
     }
 }

@@ -110,11 +110,11 @@ public abstract class Quest {
     
     //calcula a recompesa que o player ira receber, com base nas metas que ele completou
     Reward calculateRewards (){
-        
+        return null;
     }
     //calcula a visibilidade que a quest possui
     int calculateVisibility (){
-        
+        return 0;
     }
     
     
