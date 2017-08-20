@@ -19,6 +19,7 @@ public class Player {
     private int level;                                                      //lvl do player
     private float experience;                                               //quantidade de xp que o usuario possui
     private float reputation;                                               //reputaçao que usuario adiquiriu ao criar SQ e Party
+    private List<List<Goal>> questGoals;
     private List<Reward> rewardsOwned;                                      //lista de recompensas conseguidas em Quests, menos exp(valor total adicionado em experience)
     private List<Reward> rewardsAvailable;                                  //lista de recompensas desbloquadas para oferecer na SQ (incluindo quantidade fixa de xp - )
     private PlayerPerformance performance;                                  //a performance geral do jogador
@@ -26,7 +27,7 @@ public class Player {
     private List<Quest> questsJoined = new ArrayList<Quest>();              //quests ativas para o usuario(num max definido pelos privilegios)
     private List<SideQuest> createdSQ = new ArrayList<SideQuest>();         //as quests que o player criou
     private List<Party> createdPaties = new ArrayList<Party>();             //as partys que o player criou
-    private List<Party> parties = new ArrayList<Party>();                   //lista de equipes que o jogador participa
+    private Party party;                                                    //equipe que o jogador participa
     
     private Clan clan;                                                              //clan do jogador
     private PrivilegeEnum privileges;                                               //privilegios do jogador no jogo
@@ -66,6 +67,15 @@ public class Player {
         this.reputation = reputation;
     }
 
+    public List<List<Goal>> getQuestGoals() {
+        return questGoals;
+    }
+    /*
+    public void setQuestGoals(List<List<Goal>> questGoals) {
+        this.questGoals = questGoals;
+    }
+    */
+  
     public PlayerPerformance getPerformance() {
         return performance;
     }
@@ -106,16 +116,7 @@ public class Player {
         this.questsJoined = questsJoined;
     }
     */
-    public void addQuestsJoined(Quest quest) {
-        this.questsJoined.add(quest) ;
-        quest.addUsersEnlisted(this); 
-    }
-    
-    public void removeQuestsJoined(Quest quest) {
-        this.questsJoined.remove(quest) ;
-        quest.removeUsersEnlisted(this); 
-    }
-    
+           
     public List<SideQuest> getCreatedSQ() {
         return createdSQ;
     }
@@ -124,9 +125,6 @@ public class Player {
         this.createdSQ = createdSQ;
     }
     */
-    public void addCreatedSQ(SideQuest sq) {
-        this.createdSQ.add(sq) ;
-    }
     
     public void removeCreatedSQ(SideQuest sq) {
         this.createdSQ.remove(sq) ;
@@ -140,12 +138,12 @@ public class Player {
         this.createdPaties = createdPaties;
     }
 
-    public List<Party> getParties() {
-        return parties;
+    public Party getParty() {
+        return party;
     }
 
-    public void setParties(List<Party> parties) {
-        this.parties = parties;
+    public void setParty(Party party) {
+        this.party = party;
     }
 
     public Clan getClan() {
@@ -172,6 +170,16 @@ public class Player {
         this.achievements = achievements;
     }
     
+    public void enlist(Quest quest) {
+        this.questsJoined.add(quest) ;
+        questGoals.add(quest.addUsersEnlisted(this)); 
+    }
+    
+    public void unlist(Quest quest) {
+        this.questsJoined.remove(quest) ;
+        quest.removeUsersEnlisted(this); 
+    }
+    
     //atualiza o privilegio do jogador
     public void updatePrivileges(){
         
@@ -179,23 +187,102 @@ public class Player {
             switch (privileges){
                 case beginer:
                     this.privileges = PrivilegeEnum.experienced;
-                    break;
+                    return;
                 case experienced:
                     this.privileges = PrivilegeEnum.master;
-                    break;
             }
         }
     }
     
-    public boolean createSideQuest(){
+    //verifica as SQ terminadas e retira da lista
+    public void updateSQ(){
+        createdSQ.stream().filter((sq) -> (sq.isFinished())).forEach((sq) -> {
+            createdSQ.remove(sq);
+        });
+    }
+    
+    //cria SQ
+    public SideQuest createSideQuest(String name, String description, List<Goal> goals, List<Reward> rewards){
+        SideQuest newSQ;
         
         updatePrivileges();
-        //verificar as SQ criadas ativas - ou fazer elas se removerem da lista quando terminadas
-        
-        //criar a sq de acordo com as variaveis limitantes de criacao
-        return true;
+        updateSQ();
+        if(createdSQ.size() < privileges.getMaxSQCreated()){       
+            newSQ = new SideQuest(this, name, description, goals, rewards);
+            createdSQ.add(newSQ);
+            //fazer com que SQ se removerem da lista quando terminadas
+            return newSQ;
+        }
+        else return null;    
+    }
+    
+    //requisita o fim da quest para receber as rewards
+    public void requestReward(Quest quest){
+        quest.giveReward(this);
+    }
+    
+    //distribui a xp a adiciona as reward owned
+    public void receiveReward(List<Reward> rewards){
         
     }
     
+    //atualiza a equipe se nao estiver em nenhuma ainda
+    public boolean updateParty(Party party){
+        if (this.party == null){
+            this.party = party;
+            return true;
+        }
+        return false;
+    }
+    
+    //cria equipe
+    public Party createParty(String name, String description, SideQuest sideQuest){
+        Party newPrt;
+        
+        newPrt = new Party(name, description, this, sideQuest);
+        party = newPrt;
+        
+        return newPrt;
+    }
+    
+    //jogador solicita ser adicionado na equipe
+    public boolean requestParty(Party party){
+        if(this.party != null) 
+            this.party.leaveParty(this);
+        this.party = null;
+        
+        if (party.addRequest(this))
+            return true;
+        else
+            return false;
+        
+    }
+    
+    //criador da equipe aceita a solicitaçao para entrar na equipe
+    public void acceptPartyRequest(List<Player> players){
+       if( this.party.getCreator().equals(this) ){
+           
+           if(party.getRequests().containsAll(players))
+               for (Player player : players) {
+                   this.party.addMember(player);
+                }
+                      
+       }
+    }
+    
+    //jogador aceita o convite para uma equipe
+    public boolean acceptPartyInvite(Party party){
+        if(party.getInvites().contains(this)){
+            return party.addMember(this);
+        }
+        return false;
+    }
+    
+    //abandona a equipe
+    public void leaveParty(){
+        if (this.party !=null)
+            this.party.leaveParty(this);
+        this.party = null;
+    }
 
 }

@@ -17,9 +17,7 @@ public abstract class Quest {
     private String name;                                            //nome da quest
     private String description;                                     //descriçao geral da quest
     private boolean finished;                                       //status da quest        
-    private int visibility;                                         //visibilidade da quest (depende do numero de jogadores e da reputacao do criador nas SQ - sempre max nas MQ) 
     private List<Player> usersEnlisted = new ArrayList<Player>();   //lista de usuario que participam da missao    
-    
     private List<Goal> goals = new ArrayList<Goal>();            //lista de metas para a missao
     private List<Reward> rewards = new ArrayList<Reward>();      //lista de recompensa para a missao
 
@@ -49,29 +47,13 @@ public abstract class Quest {
     public void setDescription(String description) {
         this.description = description;
     }
-    
-    //verifica se as goals estao completas e altera o estado da quest
+
     public boolean isFinished() {
-        for (Goal g : goals) {
-            
-            if (!g.isFinished()) return finished;
-            
-        }
-        
-        setFinished(true);
         return finished;
     }
-
+            
     public void setFinished(boolean finished) {
         this.finished = finished;
-    }
-
-    public int getVisibility() {
-        return visibility;
-    }
-
-    public void setVisibility(int visibility) {
-        this.visibility = visibility;
     }
 
     public List<Player> getUsersEnlisted() {
@@ -82,8 +64,9 @@ public abstract class Quest {
         this.usersEnlisted = usersEnlisted;
     }
     */
-    public void addUsersEnlisted(Player player) {
+    public List<Goal> addUsersEnlisted(Player player) {
         this.usersEnlisted.add(player);
+        return this.goals;
     }
     
     public void removeUsersEnlisted(Player player) {
@@ -101,19 +84,39 @@ public abstract class Quest {
     public List<Reward> getRewards() {
         return rewards;
     }
-
+    /*
     public void setRewards(List<Reward> rewards) {
         this.rewards = rewards;
     }
-    
-    
+    */
+    //verifica se as goals estao completas e altera o estado da quest
+    public boolean isCompleted(List<Goal> playerGoals) {
+        for (Goal g : playerGoals) {
+            if (!g.isFinished()) return false;
+        }
+                       
+        return true;
+    }
     
     //calcula a recompesa que o player ira receber, com base nas metas que ele completou
-    Reward calculateRewards (){
+    public List<Reward> calculateRewards (){
+        List<Reward> parcRewards = new ArrayList<>() ;
+        //calcula as rewards com base em isCompleted
         
+        return parcRewards;
     }
-    //calcula a visibilidade que a quest possui
-    int calculateVisibility (){
+    
+    public void giveReward(Player player){
+        player.receiveReward(calculateRewards());
+    }
+    
+    //termina a quest distribuindo as recompensas e removendo os jogadores
+    public void finishQuest(){
+        this.finished = true;
+        for (Player player : usersEnlisted) {
+            giveReward(player);
+            usersEnlisted.remove(player);
+        }
         
     }
     

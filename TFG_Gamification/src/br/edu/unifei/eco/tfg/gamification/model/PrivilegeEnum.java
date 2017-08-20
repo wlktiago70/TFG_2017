@@ -13,14 +13,13 @@ import java.util.List;
  */
 public enum PrivilegeEnum {
 
-    beginer(1,1,750,0,0,0,0),
-    experienced(3,2,2000,2,2,3,10),
-    master(5,3,-1,5,5,5,25),
-    creator(0,0,-1,-1,7,7,25);
+    beginer(1,750,0,0,0,0),
+    experienced(3,2000,2,2,3,10),
+    master(5,-1,5,5,5,25),
+    creator(0,-1,-1,7,7,25);
     
     //privilegios relacionados ao jogo
     private final int maxSQJoined;                    //numero maximo de SQ ativas ao mesmo tempo
-    private final int maxPartyJoined;                 //numero maximo de partys que o jogador pode estar  
     private final float nextPrivilege;                //quantidade de xp para poder passar para o prox privilegio
     
     //privelegios relacionados a criaçao de side quests
@@ -32,10 +31,9 @@ public enum PrivilegeEnum {
     private final int maxNumberPlayers;               //numero maximo de players na party
 
     
-    private PrivilegeEnum(int maxSQJoined, int maxPartyJoined, float nextPrivilege, int maxSQCreated, int maxGoals,
+    private PrivilegeEnum(int maxSQJoined, float nextPrivilege, int maxSQCreated, int maxGoals,
                                             int maxRewardsGiven, int maxNumberPlayers) {
         this.maxSQJoined = maxSQJoined;
-        this.maxPartyJoined = maxPartyJoined;
         this.nextPrivilege = nextPrivilege;
         this.maxSQCreated = maxSQCreated;
         this.maxGoals = maxGoals;
@@ -48,10 +46,6 @@ public enum PrivilegeEnum {
 
     public int getMaxSQJoined() {
         return maxSQJoined;
-    }
-
-    public int getMaxPartyJoined() {
-        return maxPartyJoined;
     }
 
     public float getNextPrivilege() {

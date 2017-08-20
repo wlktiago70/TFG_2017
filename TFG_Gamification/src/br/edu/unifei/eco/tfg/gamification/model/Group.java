@@ -14,6 +14,12 @@ public abstract class Group {
     private String name;                    //nome do grupo
     private String description;             //breve descriçao do grupo
 
+    
+    public Group(String name, String description) {
+        this.name = name;
+        this.description = description;
+    }
+
     public String getName() {
         return name;
     }
