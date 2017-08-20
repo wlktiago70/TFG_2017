@@ -120,6 +120,5 @@ public abstract class Quest {
         
     }
     
-    
-    
 }
+    
