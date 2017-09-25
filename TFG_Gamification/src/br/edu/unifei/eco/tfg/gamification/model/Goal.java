@@ -30,6 +30,10 @@ public abstract class Goal {
         this.finished = finished;
     }
     
+    public void validate(){
+        
+    }
+    
     
     
 }

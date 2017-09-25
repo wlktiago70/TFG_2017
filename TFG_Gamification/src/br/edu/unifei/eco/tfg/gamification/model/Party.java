@@ -19,6 +19,7 @@ public class Party extends Group {
     private List<Player> members = new ArrayList<Player>();
     private List<Player> requests;
     private List<Player> invites;
+    private boolean active;
 
     public Party(String name, String description, Player creator, SideQuest sideQuest) {
         
@@ -62,11 +63,21 @@ public class Party extends Group {
     public List<Player> getInvites() {
         return invites;
     }
+    
 /*
     public void setInvites(List<Player> invites) {
-        this.invites = invites;
+    this.invites = invites;
     }
-  */  
+     */
+    
+    public boolean isActive() {
+        return active;
+    }
+    
+    public void setActive(boolean active) {
+        this.active = active;
+    }
+
     //adiciona membro na equipe
     public boolean addMember(Player newMember) {
         if (this.members.size() < creator.getPrivileges().getMaxNumberPlayers() ){
@@ -96,9 +107,9 @@ public class Party extends Group {
     }
     
     //adiciona jogador a lista de invites
-    public void invite(List<Player> players){
+    public void invite(Player player){
         
-        this.invites.addAll(players);
+        this.invites.add(player);
         
     }
     
