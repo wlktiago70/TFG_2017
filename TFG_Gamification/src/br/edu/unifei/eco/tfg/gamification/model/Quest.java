@@ -109,6 +109,7 @@ public abstract class Quest {
     
     public void giveReward(Player player){
         player.receiveReward(calculateRewards());
+        player.unlist(this);
     }
     
     //termina a quest distribuindo as recompensas e removendo os jogadores
@@ -116,7 +117,7 @@ public abstract class Quest {
         this.finished = true;
         for (Player player : usersEnlisted) {
             giveReward(player);
-            usersEnlisted.remove(player);
+            player.unlist(this);
         }
         
     }

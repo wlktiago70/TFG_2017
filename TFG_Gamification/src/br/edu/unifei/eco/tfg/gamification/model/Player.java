@@ -233,6 +233,10 @@ public class Player {
     
     //distribui a xp a adiciona as reward owned
     public void receiveReward(List<Reward> rewards){
+        for (Reward reward : rewards) {
+            if (!this.rewardsOwned.contains(reward))
+                this.rewardsOwned.add(reward);
+        }
         
     }
     
