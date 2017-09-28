@@ -19,15 +19,17 @@ public class Player {
     private int level;                                                      //lvl do player
     private float experience;                                               //quantidade de xp que o usuario possui
     private float reputation;                                               //reputaçao que usuario adiquiriu ao criar SQ e Party
-    private List<List<Goal>> questGoals;
+    private List<List<Goal>> questGoals;                                    //Todas as metas que o jogador tem a cumprir
     private List<Reward> rewardsOwned;                                      //lista de recompensas conseguidas em Quests, menos exp(valor total adicionado em experience)
     private List<Reward> rewardsAvailable;                                  //lista de recompensas desbloquadas para oferecer na SQ (incluindo quantidade fixa de xp - )
     private PlayerPerformance performance;                                  //a performance geral do jogador
+    private List<Goal> sensoringGoals;                                      //Objetivos que o jogador pode validar
     private List<Player> friends = new ArrayList<Player>();                 //lista de amigos
     private List<Quest> questsJoined = new ArrayList<Quest>();              //quests ativas para o usuario(num max definido pelos privilegios)
     private List<SideQuest> createdSQ = new ArrayList<SideQuest>();         //as quests que o player criou
     private List<Party> createdPaties = new ArrayList<Party>();             //as partys que o player criou
     private Party party;                                                    //equipe que o jogador participa
+    
     
     private Clan clan;                                                              //clan do jogador
     private PrivilegeEnum privileges;                                               //privilegios do jogador no jogo
@@ -84,6 +86,14 @@ public class Player {
         this.performance = performance;
     }
 
+    public List<Goal> getSensoringGoals() {
+        return sensoringGoals;
+    }
+
+    public void addSensoringGoals(Goal goal) {
+        this.sensoringGoals.add(goal);
+    }
+        
     public List<Reward> getRewardsOwned() {
         return rewardsOwned;
     }
@@ -177,7 +187,7 @@ public class Player {
     
     public void unlist(Quest quest) {
         this.questsJoined.remove(quest) ;
-        quest.removeUsersEnlisted(this); 
+        questGoals.remove(quest.removeUsersEnlisted(this)); 
     }
     
     //atualiza o privilegio do jogador

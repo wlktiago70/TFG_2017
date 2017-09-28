@@ -69,8 +69,9 @@ public abstract class Quest {
         return this.goals;
     }
     
-    public void removeUsersEnlisted(Player player) {
+    public List<Goal> removeUsersEnlisted(Player player) {
         this.usersEnlisted.remove(player);
+        return this.goals;
     }
     
     public List<Goal> getGoals() {

@@ -13,7 +13,26 @@ import java.util.List;
  * @author Paulo
  */
 public class ManualValidation extends Goal {
+    private List<Player> sensors = new ArrayList<Player>();     //jogadores que podem validar a quest
+
+    public ManualValidation(String description, Quest quest) {
+        super(description, quest);
+    }
+  
+        
+    public void addSensors(Player sensor){
+        this.sensors.add(sensor);
+        sensor.addSensoringGoals(this);
+    }
     
-    private List<Player> sensors = new ArrayList<Player>();
-    
+    @Override
+    public void validate(Request rq){
+        rq.getMaker().getQuestGoals().get(
+                rq.getMaker().getQuestGoals().indexOf(
+                        rq.getQuest().getGoals())).get(
+                                rq.getQuest().getGoals().indexOf(rq.getGoal())).setFinished(true);
+        
+        removeRequests(rq);
+        
+    }    
 }
