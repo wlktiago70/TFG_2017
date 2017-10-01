@@ -28,8 +28,7 @@ import java.util.List;
  *
  * @author User
  */
-public class Home extends Form{
-    private Form parentForm = null;
+public class Home extends TemplateForm{
     private String userName;
     private int userScore;
     private Image userPhoto;
@@ -48,9 +47,7 @@ public class Home extends Form{
     private static Button btnParty = new Button("Party");
     private static Image[] imgHouses = new Image[4];
     public Home(Form parent, String name, int score, Image photo, List<Image> achievements){
-        super("Home", new BorderLayout());
-        parentForm = parent;
-        configureToolbar();
+        super(parent,"Home",new BorderLayout());
         userName = name;
         userScore = score;
         userPhoto = photo;
@@ -125,17 +122,5 @@ public class Home extends Form{
             System.out.println("Error when processing images: An IOException occurred.");
         }
 
-    }
-    private void configureToolbar(){
-        Toolbar.setGlobalToolbar(true);
-        Style s = UIManager.getInstance().getComponentStyle("TitleCommand");
-        //this.getToolbar().addCommandToRightBar("", FontImage.createMaterial(FontImage.MATERIAL_SEARCH, s), (e) -> Log.p("Clicked"));
-        this.getToolbar().addCommandToRightBar("", FontImage.createMaterial(FontImage.MATERIAL_MORE_VERT, s), (e) -> Log.p("Clicked"));
-        //this.getToolbar().addCommandToOverflowMenu("Overflow", null, (e) -> Log.p("Clicked"));
-        this.getToolbar().addCommandToSideMenu("Logout", null, (e) -> parentForm.showBack());
-        this.getToolbar().addSearchCommand(new SearchButtonListener(this), 3);
-    }
-    public Form getParentForm(){
-        return parentForm;
     }
 }

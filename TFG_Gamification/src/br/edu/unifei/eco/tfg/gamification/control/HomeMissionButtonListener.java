@@ -5,14 +5,11 @@
  */
 package br.edu.unifei.eco.tfg.gamification.control;
 
-import br.edu.unifei.eco.tfg.gamification.view.Home;
 import br.edu.unifei.eco.tfg.gamification.view.Mission;
-import com.codename1.io.Log;
+import br.edu.unifei.eco.tfg.gamification.view.TemplateForm;
 import com.codename1.ui.Form;
-import com.codename1.ui.Image;
 import com.codename1.ui.events.ActionEvent;
 import com.codename1.ui.events.ActionListener;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -36,7 +33,7 @@ public class HomeMissionButtonListener implements ActionListener{
             //Test Begin (Remove it when real data exists)
             List<String> list = new ArrayList<>();
             for(int i=0;i<5;i++)list.add("Mission "+(i+1));
-            descendantForm = new Mission(parentForm,list,list,list,list);
+            descendantForm = new Mission((TemplateForm) parentForm,list,list,list,list);
             //Test End
         }
     }

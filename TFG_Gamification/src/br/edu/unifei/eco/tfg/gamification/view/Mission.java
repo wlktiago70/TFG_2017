@@ -5,6 +5,7 @@
  */
 package br.edu.unifei.eco.tfg.gamification.view;
 
+import br.edu.unifei.eco.tfg.gamification.control.MissionCreateButtonListener;
 import br.edu.unifei.eco.tfg.gamification.control.SearchButtonListener;
 import com.codename1.components.Accordion;
 import com.codename1.io.Log;
@@ -26,14 +27,13 @@ import java.util.List;
  *
  * @author wkuan
  */
-public class Mission extends Form{
-    private static Form parentForm;
+public class Mission extends TemplateForm{
     private Container cntMissions = new Container();
     private Container cntVolunteering;
     private Container cntInstructional;
     private Container cntAthletics;
     private Container cntCultural;
-    private Label lblVol = new Label("Voluteering",FontImage.createMaterial(FontImage.MATERIAL_MOOD, UIManager.getInstance().getComponentStyle("Label")));
+    private Label lblVol = new Label("Volunteering",FontImage.createMaterial(FontImage.MATERIAL_MOOD, UIManager.getInstance().getComponentStyle("Label")));
     private Label lblIns = new Label("Instructional",FontImage.createMaterial(FontImage.MATERIAL_SCHOOL, UIManager.getInstance().getComponentStyle("Label")));
     private Label lblAth = new Label("Athletics",FontImage.createMaterial(FontImage.MATERIAL_FAVORITE, UIManager.getInstance().getComponentStyle("Label")));
     private Label lblCul = new Label("Cultural",FontImage.createMaterial(FontImage.MATERIAL_PALETTE, UIManager.getInstance().getComponentStyle("Label")));
@@ -44,10 +44,8 @@ public class Mission extends Form{
     private Accordion missionList = new Accordion();
     private BoxLayout boxlyt = new BoxLayout(BoxLayout.Y_AXIS);
     private Button btnCreateMission = new Button("Create mission");
-    public Mission(Form parent, List<String> lstVol, List<String> lstIns, List<String> lstAth, List<String> lstCul){
-        super("Mission", new BorderLayout());
-        configureToolbar();
-        parentForm = parent;
+    public Mission(TemplateForm parent, List<String> lstVol, List<String> lstIns, List<String> lstAth, List<String> lstCul){
+        super(parent,"Missions", new BorderLayout());
         cntVolunteering = new Container(new BoxLayout(BoxLayout.Y_AXIS));
         cntInstructional = new Container(new BoxLayout(BoxLayout.Y_AXIS));
         cntAthletics = new Container(new BoxLayout(BoxLayout.Y_AXIS));
@@ -64,6 +62,7 @@ public class Mission extends Form{
         missionList.addContent(lblIns,cntInstructional);
         missionList.addContent(lblAth,cntAthletics);
         missionList.addContent(lblCul,cntCultural);
+        btnCreateMission.addActionListener(new MissionCreateButtonListener(this));
         this.add(BorderLayout.CENTER, missionList);
         this.add(BorderLayout.SOUTH, btnCreateMission);
         this.setVisible(true);
@@ -75,12 +74,5 @@ public class Mission extends Form{
             cnt.add(btn);
             btn.addActionListener((e) -> Log.p(e.getSource().toString()+" Clicked"));
         }
-    }
-    private void configureToolbar(){
-        Toolbar.setGlobalToolbar(true);
-        Style s = UIManager.getInstance().getComponentStyle("TitleCommand");
-        this.getToolbar().addCommandToLeftBar("", FontImage.createMaterial(FontImage.MATERIAL_HOME, s), (e) -> parentForm.showBack());
-        this.getToolbar().addCommandToSideMenu("Logout", null, (e) -> ((Home)parentForm).getParentForm().showBack());
-        this.getToolbar().addSearchCommand(new SearchButtonListener(this), 3);
     }
 }
