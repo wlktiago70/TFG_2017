@@ -206,9 +206,11 @@ public class Player {
     
     //verifica as SQ terminadas e retira da lista
     public void updateSQ(){
-        createdSQ.stream().filter((sq) -> (sq.isFinished())).forEach((sq) -> {
-            createdSQ.remove(sq);
-        });
+    
+        for (SideQuest sq : createdSQ) {
+            if(sq.isFinished()) createdSQ.remove(sq);
+        }
+        
     }
     
     //cria SQ
