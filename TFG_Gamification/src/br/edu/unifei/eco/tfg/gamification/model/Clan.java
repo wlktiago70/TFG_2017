@@ -13,8 +13,14 @@ import java.util.List;
  * @author Paulo
  */
 public class Clan extends Group {
-    
     private List<Player> members = new ArrayList<Player>();
-
     
+    
+    public Clan(String name, String description) {
+        super(name, description);
+    }
+
+    public void addMember(Player player){
+        members.add(player);
+    }
 }
