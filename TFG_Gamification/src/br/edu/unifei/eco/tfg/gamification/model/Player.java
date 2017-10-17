@@ -29,13 +29,18 @@ public class Player {
     private List<SideQuest> createdSQ = new ArrayList<SideQuest>();         //as quests que o player criou
     private List<Party> createdPaties = new ArrayList<Party>();             //as partys que o player criou
     private Party party;                                                    //equipe que o jogador participa
-    
-    
+        
     private Clan clan;                                                              //clan do jogador
     private PrivilegeEnum privileges;                                               //privilegios do jogador no jogo
     private List<AchievementEnum> achievements = new ArrayList<AchievementEnum>();  //conquistas que o jogador obteve
-    
 
+    public Player(String name, Clan clan) {
+        this.name = name;
+        this.clan = clan;
+        this.privileges = privileges.beginer;
+    }
+    
+    
     
     public String getName() {
         return name;
@@ -220,7 +225,8 @@ public class Player {
         updatePrivileges();
         updateSQ();
         if(createdSQ.size() < privileges.getMaxSQCreated()){       
-            newSQ = new SideQuest(this, name, description, goals, rewards);
+            newSQ = new SideQuest(this, name, description, rewards);
+            newSQ.setGoals(goals);
             createdSQ.add(newSQ);
             //fazer com que SQ se removerem da lista quando terminadas
             return newSQ;

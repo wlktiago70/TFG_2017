@@ -15,9 +15,9 @@ public class MainQuest extends Quest {
     
     private int chapter;        //capitulo da mainquest 
     
-    public MainQuest(int chapter, String name, String description, List<Goal> goals, List<Reward> rewards) {
+    public MainQuest(int chapter, String name, String description, List<Reward> rewards) {
       
-        super(name, description, goals, rewards);
+        super(name, description, rewards);
         this.chapter = chapter;
       
     }

@@ -17,9 +17,9 @@ public class SideQuest extends Quest {
     private Party participatingPartys;  //partys que estao participando da SQ
 
     
-    public SideQuest(Player creator, String name, String description, List<Goal> goals, List<Reward> rewards) {
+    public SideQuest(Player creator, String name, String description, List<Reward> rewards) {
         
-        super(name, description, goals, rewards);
+        super(name, description, rewards);
         this.creator = creator;
         
     }

@@ -22,10 +22,9 @@ public abstract class Quest {
     private List<Reward> rewards = new ArrayList<Reward>();      //lista de recompensa para a missao
 
     
-    public Quest(String name, String description, List<Goal> goals, List<Reward> rewards) {
+    public Quest(String name, String description, List<Reward> rewards) {
         this.name = name;
         this.description = description;
-        this.goals = goals;
         this.rewards = rewards;
         
         this.finished = false;
