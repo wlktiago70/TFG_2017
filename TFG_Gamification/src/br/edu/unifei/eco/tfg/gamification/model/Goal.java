@@ -64,7 +64,10 @@ public abstract class Goal {
     }
     
     public void validate(Request rq){
-        
+        if(this.requests.contains(rq)){
+            rq.getGoal().setFinished(true);
+            this.requests.remove(rq);
+        }
     }
     
     

@@ -38,6 +38,10 @@ public class Player {
         this.name = name;
         this.clan = clan;
         this.privileges = privileges.beginer;
+        this.sensoringGoals = new ArrayList<>();
+        this.questGoals = new ArrayList<>();
+        this.rewardsOwned = new ArrayList<>();
+        this.rewardsAvailable = new ArrayList<>();
     }
     
     
@@ -219,16 +223,15 @@ public class Player {
     }
     
     //cria SQ
-    public SideQuest createSideQuest(String name, String description, List<Goal> goals, List<Reward> rewards){
+    public SideQuest createSideQuest(String name, String description, List<Reward> rewards){
         SideQuest newSQ;
         
         updatePrivileges();
         updateSQ();
         if(createdSQ.size() < privileges.getMaxSQCreated()){       
             newSQ = new SideQuest(this, name, description, rewards);
-            newSQ.setGoals(goals);
             createdSQ.add(newSQ);
-            //fazer com que SQ se removerem da lista quando terminadas
+            
             return newSQ;
         }
         else return null;    
