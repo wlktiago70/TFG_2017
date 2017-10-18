@@ -28,13 +28,15 @@ public class Player {
     private List<Quest> questsJoined = new ArrayList<Quest>();              //quests ativas para o usuario(num max definido pelos privilegios)
     private List<SideQuest> createdSQ = new ArrayList<SideQuest>();         //as quests que o player criou
     private List<Party> createdPaties = new ArrayList<Party>();             //as partys que o player criou
+    private PlayerOcupationEnum ocupation;                                  //definicçao do que o jogador faz no ambiente academico
     private Party party;                                                    //equipe que o jogador participa
         
     private Clan clan;                                                              //clan do jogador
     private PrivilegeEnum privileges;                                               //privilegios do jogador no jogo
     private List<AchievementEnum> achievements = new ArrayList<AchievementEnum>();  //conquistas que o jogador obteve
+    
 
-    public Player(String name, Clan clan) {
+    public Player(String name, Clan clan, PlayerOcupationEnum ocupation) {
         this.name = name;
         this.clan = clan;
         this.privileges = privileges.beginer;
@@ -42,6 +44,7 @@ public class Player {
         this.questGoals = new ArrayList<>();
         this.rewardsOwned = new ArrayList<>();
         this.rewardsAvailable = new ArrayList<>();
+        this.ocupation = ocupation;
     }
     
     
@@ -223,13 +226,13 @@ public class Player {
     }
     
     //cria SQ
-    public SideQuest createSideQuest(String name, String description, List<Reward> rewards){
+    public SideQuest createSideQuest(String name, String description, List<Reward> rewards, ClassificationEnum classification){
         SideQuest newSQ;
         
         updatePrivileges();
         updateSQ();
         if(createdSQ.size() < privileges.getMaxSQCreated()){       
-            newSQ = new SideQuest(this, name, description, rewards);
+            newSQ = new SideQuest(this, name, description, rewards, classification);
             createdSQ.add(newSQ);
             
             return newSQ;

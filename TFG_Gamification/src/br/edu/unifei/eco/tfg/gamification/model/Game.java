@@ -61,19 +61,19 @@ public class Game {
         //cria 2 jogadores
         Player p1, p2, p3;
                 
-        p1 = new Player("player1",clans.get(0));
+        p1 = new Player("player1",clans.get(0), PlayerOcupationEnum.eCcmputacao);
         this.players.add(p1);
         
-        p2 = new Player("player2",clans.get(1));
+        p2 = new Player("player2",clans.get(1), PlayerOcupationEnum.eControleAutomacao);
         this.players.add(p2);
         
-        p3 = new Player("player3",clans.get(1));
+        p3 = new Player("player3",clans.get(1), PlayerOcupationEnum.eEletronica);
         this.players.add(p3);
         
 
         //player 1 cria uma sidequest (com a msm reward da mainquest para fins de simplificaçao)
         p1.setPrivileges(PrivilegeEnum.experienced);
-        SideQuest sq = p1.createSideQuest("SideTst", "Side Quest test", rw);
+        SideQuest sq = p1.createSideQuest("SideTst", "Side Quest test", rw, ClassificationEnum.social);
         
         Goal sqGoal = new ManualValidation("SideQuest Goal Teste", sq);
         List<Goal> sqGoals = new ArrayList<Goal>();
