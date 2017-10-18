@@ -41,6 +41,10 @@ public class SideQuest extends Quest {
         return participatingPartys;
     }
 
+    public ClassificationEnum getClassification() {
+        return classification;
+    }
+        
     public void setParticipatingPartys(Party participatingPartys) {
         this.participatingPartys = participatingPartys;
     }

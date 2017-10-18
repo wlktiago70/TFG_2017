@@ -201,6 +201,11 @@ public class Player {
         this.questsJoined.remove(quest) ;
         questGoals.remove(quest.removeUsersEnlisted(this)); 
     }
+
+    public PlayerOcupationEnum getOcupation() {
+        return ocupation;
+    }
+    
     
     //atualiza o privilegio do jogador
     public void updatePrivileges(){
