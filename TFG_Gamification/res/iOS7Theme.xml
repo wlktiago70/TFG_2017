@@ -1,0 +1,806 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resource majorVersion="1" minorVersion="7" useXmlUI="false">
+    <image name="arrow.png" type="multi"  />
+    <image name="BackButtonPressedCenter" type="multi"  />
+    <image name="BackButtonPressedLeft" type="multi"  />
+    <image name="BackButtonPressedRight" type="multi"  />
+    <image name="BackMedia.png" type="multi"  />
+    <image name="Blank.png" type="multi"  />
+    <image name="check.png" type="multi"  />
+    <image name="check_selected.png" type="multi"  />
+    <image name="ComboBox.borderBottom:1" type="multi"  />
+    <image name="ComboBox.borderBottomL:1" type="multi"  />
+    <image name="ComboBox.borderBottomR:1" type="multi"  />
+    <image name="ComboBox.borderCenter:1" type="multi"  />
+    <image name="ComboBox.borderLeft:1" type="multi"  />
+    <image name="ComboBox.borderRight:1" type="multi"  />
+    <image name="ComboBox.borderTop:1" type="multi"  />
+    <image name="ComboBox.borderTopL:1" type="multi"  />
+    <image name="ComboBox.borderTopR:1" type="multi"  />
+    <image name="ComboBox.sel#borderBottom:1" type="multi"  />
+    <image name="ComboBox.sel#borderBottomL:1" type="multi"  />
+    <image name="ComboBox.sel#borderBottomR:1" type="multi"  />
+    <image name="ComboBox.sel#borderCenter:1" type="multi"  />
+    <image name="ComboBox.sel#borderLeft:1" type="multi"  />
+    <image name="ComboBox.sel#borderRight:1" type="multi"  />
+    <image name="ComboBox.sel#borderTop:1" type="multi"  />
+    <image name="ComboBox.sel#borderTopL:1" type="multi"  />
+    <image name="ComboBox.sel#borderTopR:1" type="multi"  />
+    <image name="CommandBar" type="multi"  />
+    <image name="Dialog.borderBottom:1" type="multi"  />
+    <image name="Dialog.borderBottom_1.png" type="multi"  />
+    <image name="Dialog.borderBottomL:1" type="multi"  />
+    <image name="Dialog.borderBottomL_1.png" type="multi"  />
+    <image name="Dialog.borderBottomR:1" type="multi"  />
+    <image name="Dialog.borderBottomR_1.png" type="multi"  />
+    <image name="Dialog.borderCenter:1" type="multi"  />
+    <image name="Dialog.borderCenter_1.png" type="multi"  />
+    <image name="Dialog.borderLeft:1" type="multi"  />
+    <image name="Dialog.borderLeft_1.png" type="multi"  />
+    <image name="Dialog.borderRight:1" type="multi"  />
+    <image name="Dialog.borderRight_1.png" type="multi"  />
+    <image name="Dialog.borderTop:1" type="multi"  />
+    <image name="Dialog.borderTop_1.png" type="multi"  />
+    <image name="Dialog.borderTopL:1" type="multi"  />
+    <image name="Dialog.borderTopL_1.png" type="multi"  />
+    <image name="Dialog.borderTopR:1" type="multi"  />
+    <image name="Dialog.borderTopR_1.png" type="multi"  />
+    <image name="empty.png"  />
+    <image name="ForwardMedia.png" type="multi"  />
+    <image name="gray_line.jpg"  />
+    <image name="GroupElement.borderBottom:1" type="multi"  />
+    <image name="GroupElement.borderBottomL:1" type="multi"  />
+    <image name="GroupElement.borderBottomR:1" type="multi"  />
+    <image name="GroupElement.borderCenter:1" type="multi"  />
+    <image name="GroupElement.borderLeft:1" type="multi"  />
+    <image name="GroupElement.borderRight:1" type="multi"  />
+    <image name="GroupElement.borderTop:1" type="multi"  />
+    <image name="GroupElement.borderTopL:1" type="multi"  />
+    <image name="GroupElement.borderTopR:1" type="multi"  />
+    <image name="GroupElement.sel#borderBottom:1" type="multi"  />
+    <image name="GroupElement.sel#borderBottomL:1" type="multi"  />
+    <image name="GroupElement.sel#borderBottomR:1" type="multi"  />
+    <image name="GroupElement.sel#borderCenter:1" type="multi"  />
+    <image name="GroupElement.sel#borderLeft:1" type="multi"  />
+    <image name="GroupElement.sel#borderRight:1" type="multi"  />
+    <image name="GroupElement.sel#borderTop:1" type="multi"  />
+    <image name="GroupElement.sel#borderTopL:1" type="multi"  />
+    <image name="GroupElement.sel#borderTopR:1" type="multi"  />
+    <image name="GroupElementFirst.borderBottom:1" type="multi"  />
+    <image name="GroupElementFirst.borderBottomL:1" type="multi"  />
+    <image name="GroupElementFirst.borderBottomR:1" type="multi"  />
+    <image name="GroupElementFirst.borderCenter:1" type="multi"  />
+    <image name="GroupElementFirst.borderLeft:1" type="multi"  />
+    <image name="GroupElementFirst.borderRight:1" type="multi"  />
+    <image name="GroupElementFirst.borderTop:1" type="multi"  />
+    <image name="GroupElementFirst.borderTopL:1" type="multi"  />
+    <image name="GroupElementFirst.borderTopR:1" type="multi"  />
+    <image name="GroupElementFirst.sel#borderBottom:1" type="multi"  />
+    <image name="GroupElementFirst.sel#borderBottomL:1" type="multi"  />
+    <image name="GroupElementFirst.sel#borderBottomR:1" type="multi"  />
+    <image name="GroupElementFirst.sel#borderCenter:1" type="multi"  />
+    <image name="GroupElementFirst.sel#borderLeft:1" type="multi"  />
+    <image name="GroupElementFirst.sel#borderRight:1" type="multi"  />
+    <image name="GroupElementFirst.sel#borderTop:1" type="multi"  />
+    <image name="GroupElementFirst.sel#borderTopL:1" type="multi"  />
+    <image name="GroupElementFirst.sel#borderTopR:1" type="multi"  />
+    <image name="GroupElementLast.borderBottom:1" type="multi"  />
+    <image name="GroupElementLast.borderBottomL:1" type="multi"  />
+    <image name="GroupElementLast.borderBottomR:1" type="multi"  />
+    <image name="GroupElementLast.borderCenter:1" type="multi"  />
+    <image name="GroupElementLast.borderLeft:1" type="multi"  />
+    <image name="GroupElementLast.borderRight:1" type="multi"  />
+    <image name="GroupElementLast.borderTop:1" type="multi"  />
+    <image name="GroupElementLast.borderTopL:1" type="multi"  />
+    <image name="GroupElementLast.borderTopR:1" type="multi"  />
+    <image name="GroupElementLast.sel#borderBottom:2" type="multi"  />
+    <image name="GroupElementLast.sel#borderBottomL:2" type="multi"  />
+    <image name="GroupElementLast.sel#borderBottomR:2" type="multi"  />
+    <image name="GroupElementLast.sel#borderCenter:2" type="multi"  />
+    <image name="GroupElementLast.sel#borderLeft:2" type="multi"  />
+    <image name="GroupElementLast.sel#borderRight:2" type="multi"  />
+    <image name="GroupElementLast.sel#borderTop:2" type="multi"  />
+    <image name="GroupElementLast.sel#borderTopL:2" type="multi"  />
+    <image name="GroupElementLast.sel#borderTopR:2" type="multi"  />
+    <image name="GroupElementOnly.borderBottom:1" type="multi"  />
+    <image name="GroupElementOnly.borderBottomL:1" type="multi"  />
+    <image name="GroupElementOnly.borderBottomR:1" type="multi"  />
+    <image name="GroupElementOnly.borderCenter:1" type="multi"  />
+    <image name="GroupElementOnly.borderLeft:1" type="multi"  />
+    <image name="GroupElementOnly.borderRight:1" type="multi"  />
+    <image name="GroupElementOnly.borderTop:1" type="multi"  />
+    <image name="GroupElementOnly.borderTopL:1" type="multi"  />
+    <image name="GroupElementOnly.borderTopR:1" type="multi"  />
+    <image name="GroupElementOnly.sel#borderBottom:1" type="multi"  />
+    <image name="GroupElementOnly.sel#borderBottomL:1" type="multi"  />
+    <image name="GroupElementOnly.sel#borderBottomR:1" type="multi"  />
+    <image name="GroupElementOnly.sel#borderCenter:1" type="multi"  />
+    <image name="GroupElementOnly.sel#borderLeft:1" type="multi"  />
+    <image name="GroupElementOnly.sel#borderRight:1" type="multi"  />
+    <image name="GroupElementOnly.sel#borderTop:1" type="multi"  />
+    <image name="GroupElementOnly.sel#borderTopL:1" type="multi"  />
+    <image name="GroupElementOnly.sel#borderTopR:1" type="multi"  />
+    <theme name="iOS7">
+        <val key="@ComponentGroupBool" value="true" />
+        <val key="@PopupDialogArrowBool" value="true" />
+        <val key="@PopupDialogArrowBottomImage" value="Popup_arrow_bottom.png" />
+        <val key="@PopupDialogArrowLeftImage" value="Popup_arrow_left.png" />
+        <val key="@PopupDialogArrowRightImage" value="Popup_arrow_right.png" />
+        <val key="@PopupDialogArrowTopImage" value="Popup_arrow.png" />
+        <val key="@TabSelectedImage" value="tab_selected_icon.png" />
+        <val key="@TabUnselectedImage" value="tab_unselected_icon.png" />
+        <val key="@alwaysTensileBool" value="true" />
+        <val key="@backUsesTitleBool" value="true" />
+        <val key="@checkBoxOppositeSideBool" value="true" />
+        <val key="@comboImage" value="empty.png" />
+        <val key="@commandBehavior" value="Title" />
+        <val key="@dialogButtonCommandsBool" value="true" />
+        <val key="@dialogPosition" value="Center" />
+        <val key="@dialogTransitionIn" value="fade" />
+        <val key="@dialogTransitionOut" value="fade" />
+        <val key="@dlgButtonCommandUIID" value="DialogButton" />
+        <val key="@dlgCommandButtonSizeInt" value="80" />
+        <val key="@dlgCommandGridBool" value="true" />
+        <val key="@dlgInvisibleButtons" value="bfbfbf" />
+        <val key="@formTransitionOut" value="slidefade" />
+        <val key="@hideEmptyTitleBool" value="true" />
+        <val key="@includeExitBool" value="false" />
+        <val key="@ios7SpinnerBool" value="false" />
+        <val key="@mediaBackImage" value="BackMedia.png" />
+        <val key="@mediaFwdImage" value="ForwardMedia.png" />
+        <val key="@mediaPauseImage" value="PlayMedia.png" />
+        <val key="@mediaPlayImage" value="PlayMedia.png" />
+        <val key="@noTextModeBool" value="true" />
+        <val key="@onOffIOSModeBool" value="true" />
+        <val key="@paintsTitleBarBool" value="true" />
+        <val key="@popupNoTitleAddPaddingInt" value="2" />
+        <val key="@pureTouchBool" value="true" />
+        <val key="@radioOppositeSideBool" value="true" />
+        <val key="@radioSelectedFocusImage" value="check_selected.png" />
+        <val key="@radioSelectedImage" value="check.png" />
+        <val key="@radioUnselectedFocusImage" value="Blank.png" />
+        <val key="@radioUnselectedImage" value="Blank.png" />
+        <val key="@shrinkPopupTitleBool" value="true" />
+        <val key="@switchMaskImage" value="ios_switch_mask.png" />
+        <val key="@switchOffImage" value="ios_switch_off.png" />
+        <val key="@switchOnImage" value="ios_switch_on.png" />
+        <val key="@tabPlacementInt" value="2" />
+        <val key="@tabsGridBool" value="true" />
+        <val key="@textCmpVAlignInt" value="4" />
+        <val key="@textFieldCursorColorInt" value="2251746" />
+        <val key="@tickerSpeedInt" value="0" />
+        <val key="@tintColor" value="aa000000" />
+        <val key="BackCommand.align" value="4" />
+        <val key="BackCommand.bgImage" value="arrow.png" />
+        <val key="BackCommand.bgType" value="22" />
+        <val key="BackCommand.fgColor" value="157efb" />
+        <val key="BackCommand.padUnit" value="0,2,0,0" />
+        <val key="BackCommand.padding" value="0,3,3,3" />
+        <val key="BackCommand.press#align" value="4" />
+        <val key="BackCommand.press#bgImage" value="arrow.png" />
+        <val key="BackCommand.press#bgType" value="22" />
+        <val key="BackCommand.press#fgColor" value="cde4ff" />
+        <val key="BackCommand.press#padUnit" value="0,2,0,0" />
+        <val key="BackCommand.press#padding" value="3,3,3,3" />
+        <val key="BackCommand.press#transparency" value="0" />
+        <val key="BackCommand.sel#align" value="4" />
+        <val key="BackCommand.sel#bgImage" value="arrow.png" />
+        <val key="BackCommand.sel#bgType" value="22" />
+        <val key="BackCommand.sel#fgColor" value="7aff" />
+        <val key="BackCommand.sel#padUnit" value="0,2,0,0" />
+        <val key="BackCommand.sel#padding" value="3,3,3,3" />
+        <val key="BackCommand.sel#transparency" value="0" />
+        <val key="BackCommand.transparency" value="0" />
+        <val key="Button.align" value="4" />
+        <border key="Button.border" type="empty" />
+        <val key="Button.dis#align" value="4" />
+        <border key="Button.dis#border" type="empty" />
+        <val key="Button.dis#derive" value="Button" />
+        <val key="Button.dis#fgColor" value="cccccc" />
+        <font key="Button.dis#font" type="ttf" face="0" style="0" size="0" name="native:MainRegular" family="native:MainRegular" sizeSettings="3" actualSize="3.0" />
+        <val key="Button.dis#margin" value="0,0,0,0" />
+        <val key="Button.dis#padUnit" value="2,2,2,2" />
+        <val key="Button.dis#padding" value="1,1,2,2" />
+        <val key="Button.fgColor" value="157efb" />
+        <font key="Button.font" type="ttf" face="0" style="0" size="0" name="native:MainRegular" family="native:MainRegular" sizeSettings="3" actualSize="3.0" />
+        <val key="Button.margin" value="0,0,0,0" />
+        <val key="Button.padUnit" value="2,2,2,2" />
+        <val key="Button.padding" value="1,1,2,2" />
+        <val key="Button.press#align" value="4" />
+        <border key="Button.press#border" type="empty" />
+        <val key="Button.press#derive" value="Button" />
+        <val key="Button.press#fgColor" value="5ba5ff" />
+        <font key="Button.press#font" type="ttf" face="0" style="0" size="0" name="native:MainRegular" family="native:MainRegular" sizeSettings="3" actualSize="3.0" />
+        <val key="Button.press#margin" value="0,0,0,0" />
+        <val key="Button.press#padUnit" value="2,2,2,2" />
+        <val key="Button.press#padding" value="1,1,2,2" />
+        <val key="Button.sel#align" value="4" />
+        <border key="Button.sel#border" type="empty" />
+        <val key="Button.sel#derive" value="Button" />
+        <font key="Button.sel#font" type="ttf" face="0" style="0" size="0" name="native:MainRegular" family="native:MainRegular" sizeSettings="3" actualSize="3.0" />
+        <val key="Button.sel#margin" value="0,0,0,0" />
+        <val key="Button.sel#padUnit" value="2,2,2,2" />
+        <val key="Button.sel#padding" value="1,1,2,2" />
+        <val key="ButtonGroup.align" value="4" />
+        <val key="ButtonGroup.derive" value="GroupElement" />
+        <val key="ButtonGroup.dis#align" value="4" />
+        <val key="ButtonGroup.dis#derive" value="ButtonGroup" />
+        <val key="ButtonGroup.dis#fgColor" value="cccccc" />
+        <val key="ButtonGroup.press#align" value="4" />
+        <val key="ButtonGroup.press#derive" value="GroupElement.press" />
+        <val key="ButtonGroup.sel#align" value="4" />
+        <val key="ButtonGroup.sel#derive" value="GroupElement.sel" />
+        <val key="ButtonGroupFirst.align" value="4" />
+        <val key="ButtonGroupFirst.derive" value="GroupElementFirst" />
+        <val key="ButtonGroupFirst.dis#derive" value="ButtonGroupFirst" />
+        <val key="ButtonGroupFirst.dis#fgColor" value="cccccc" />
+        <val key="ButtonGroupFirst.press#align" value="4" />
+        <val key="ButtonGroupFirst.press#derive" value="GroupElementFirst.press" />
+        <val key="ButtonGroupFirst.sel#align" value="4" />
+        <val key="ButtonGroupFirst.sel#derive" value="GroupElementFirst.sel" />
+        <val key="ButtonGroupLast.align" value="4" />
+        <val key="ButtonGroupLast.derive" value="GroupElementLast" />
+        <val key="ButtonGroupLast.dis#derive" value="ButtonGroupLast" />
+        <val key="ButtonGroupLast.dis#fgColor" value="cccccc" />
+        <val key="ButtonGroupLast.press#align" value="4" />
+        <val key="ButtonGroupLast.press#derive" value="GroupElementLast.press" />
+        <val key="ButtonGroupLast.sel#align" value="4" />
+        <val key="ButtonGroupLast.sel#derive" value="GroupElementLast.sel" />
+        <val key="ButtonGroupOnly.align" value="4" />
+        <val key="ButtonGroupOnly.derive" value="GroupElementOnly" />
+        <val key="ButtonGroupOnly.dis#derive" value="ButtonGroupOnly" />
+        <val key="ButtonGroupOnly.dis#fgColor" value="cccccc" />
+        <val key="ButtonGroupOnly.press#align" value="4" />
+        <val key="ButtonGroupOnly.press#derive" value="GroupElementOnly.press" />
+        <val key="ButtonGroupOnly.sel#align" value="4" />
+        <val key="ButtonGroupOnly.sel#derive" value="GroupElementOnly.sel" />
+        <border key="ComboBox.border" type="image" i1="ComboBox.borderTop:1" i2="ComboBox.borderBottom:1" i3="ComboBox.borderLeft:1" i4="ComboBox.borderRight:1" i5="ComboBox.borderTopL:1" i6="ComboBox.borderTopR:1" i7="ComboBox.borderBottomL:1" i8="ComboBox.borderBottomR:1" i9="ComboBox.borderCenter:1" />
+        <val key="ComboBox.padUnit" value="0,2,0,2" />
+        <val key="ComboBox.padding" value="0,0,2,2" />
+        <border key="ComboBox.sel#border" type="image" i1="ComboBox.sel#borderTop:1" i2="ComboBox.sel#borderBottom:1" i3="ComboBox.sel#borderLeft:1" i4="ComboBox.sel#borderRight:1" i5="ComboBox.sel#borderTopL:1" i6="ComboBox.sel#borderTopR:1" i7="ComboBox.sel#borderBottomL:1" i8="ComboBox.sel#borderBottomR:1" i9="ComboBox.sel#borderCenter:1" />
+        <val key="ComboBox.sel#derive" value="ComboBox" />
+        <font key="ComboBoxItem.font" type="system" face="0" style="0" size="16" />
+        <val key="ComboBoxItem.padUnit" value="0,2,0,0" />
+        <val key="ComboBoxItem.padding" value="0,0,2,4" />
+        <val key="ComboBoxItem.sel#derive" value="ComboBoxItem" />
+        <val key="ComboBoxItem.sel#fgColor" value="324e82" />
+        <font key="ComboBoxItem.sel#font" type="system" face="0" style="0" size="16" />
+        <val key="ComboBoxList.sel#derive" value="ComboBoxList" />
+        <val key="ComboBoxPopup.derive" value="List" />
+        <val key="ContentPane.margin" value="0,0,0,0" />
+        <val key="ContentPane.padding" value="0,0,0,0" />
+        <border key="Dialog.border" type="image" i1="Dialog.borderTop_1.png" i2="Dialog.borderBottom_1.png" i3="Dialog.borderLeft_1.png" i4="Dialog.borderRight_1.png" i5="Dialog.borderTopL_1.png" i6="Dialog.borderTopR_1.png" i7="Dialog.borderBottomL_1.png" i8="Dialog.borderBottomR_1.png" i9="Dialog.borderCenter_1.png" />
+        <val key="Dialog.padding" value="0,0,0,0" />
+        <val key="Dialog.transparency" value="0" />
+        <val key="DialogBody.align" value="4" />
+        <val key="DialogBody.fgColor" value="0" />
+        <val key="DialogBody.sel#fgColor" value="ffffff" />
+        <val key="DialogButton.derive" value="Button" />
+        <val key="DialogButton.margin" value="0,0,0,0" />
+        <val key="DialogButton.press#bgColor" value="0" />
+        <val key="DialogButton.press#derive" value="Button.press" />
+        <val key="DialogButton.press#margin" value="0,0,0,0" />
+        <val key="DialogButton.press#transparency" value="100" />
+        <val key="DialogButton.sel#derive" value="Button.sel" />
+        <val key="DialogButton.sel#margin" value="0,0,0,0" />
+        <val key="DialogCommandArea.margin" value="0,0,0,0" />
+        <val key="DialogCommandArea.padding" value="0,0,0,0" />
+        <val key="DialogTitle.align" value="4" />
+        <val key="DialogTitle.fgColor" value="0" />
+        <font key="DialogTitle.font" type="system" face="0" style="1" size="16" />
+        <val key="DialogTitle.padUnit" value="2,0,2,0" />
+        <val key="DialogTitle.padding" value="2,1,0,0" />
+        <val key="Form.bgColor" value="efeff4" />
+        <val key="Form.margin" value="0,0,0,0" />
+        <val key="Form.padding" value="0,0,0,0" />
+        <val key="Form.transparency" value="255" />
+        <border key="GroupElement.border" type="image" i1="GroupElement.borderTop:1" i2="GroupElement.borderBottom:1" i3="GroupElement.borderLeft:1" i4="GroupElement.borderRight:1" i5="GroupElement.borderTopL:1" i6="GroupElement.borderTopR:1" i7="GroupElement.borderBottomL:1" i8="GroupElement.borderBottomR:1" i9="GroupElement.borderCenter:1" />
+        <val key="GroupElement.dis#derive" value="GroupElement" />
+        <val key="GroupElement.dis#fgColor" value="cccccc" />
+        <val key="GroupElement.marUnit" value="0,2,0,2" />
+        <val key="GroupElement.margin" value="0,0,1,1" />
+        <val key="GroupElement.padUnit" value="2,2,2,2" />
+        <val key="GroupElement.padding" value="1,1,3,3" />
+        <val key="GroupElement.press#derive" value="GroupElement.sel" />
+        <border key="GroupElement.sel#border" type="image" i1="GroupElement.sel#borderTop:1" i2="GroupElement.sel#borderBottom:1" i3="GroupElement.sel#borderLeft:1" i4="GroupElement.sel#borderRight:1" i5="GroupElement.sel#borderTopL:1" i6="GroupElement.sel#borderTopR:1" i7="GroupElement.sel#borderBottomL:1" i8="GroupElement.sel#borderBottomR:1" i9="GroupElement.sel#borderCenter:1" />
+        <val key="GroupElement.sel#derive" value="GroupElement" />
+        <val key="GroupElement.sel#fgColor" value="ffffff" />
+        <border key="GroupElementFirst.border" type="image" i1="GroupElementFirst.borderTop:1" i2="GroupElementFirst.borderBottom:1" i3="GroupElementFirst.borderLeft:1" i4="GroupElementFirst.borderRight:1" i5="GroupElementFirst.borderTopL:1" i6="GroupElementFirst.borderTopR:1" i7="GroupElementFirst.borderBottomL:1" i8="GroupElementFirst.borderBottomR:1" i9="GroupElementFirst.borderCenter:1" />
+        <val key="GroupElementFirst.dis#derive" value="GroupElementFirst" />
+        <val key="GroupElementFirst.dis#fgColor" value="cccccc" />
+        <val key="GroupElementFirst.marUnit" value="2,2,0,2" />
+        <val key="GroupElementFirst.margin" value="1,0,1,1" />
+        <val key="GroupElementFirst.padUnit" value="2,2,2,2" />
+        <val key="GroupElementFirst.padding" value="1,1,3,3" />
+        <val key="GroupElementFirst.press#derive" value="GroupElementFirst.sel" />
+        <border key="GroupElementFirst.sel#border" type="image" i1="GroupElementFirst.sel#borderTop:1" i2="GroupElementFirst.sel#borderBottom:1" i3="GroupElementFirst.sel#borderLeft:1" i4="GroupElementFirst.sel#borderRight:1" i5="GroupElementFirst.sel#borderTopL:1" i6="GroupElementFirst.sel#borderTopR:1" i7="GroupElementFirst.sel#borderBottomL:1" i8="GroupElementFirst.sel#borderBottomR:1" i9="GroupElementFirst.sel#borderCenter:1" />
+        <val key="GroupElementFirst.sel#derive" value="GroupElementFirst" />
+        <val key="GroupElementFirst.sel#fgColor" value="ffffff" />
+        <border key="GroupElementLast.border" type="image" i1="GroupElementLast.borderTop:1" i2="GroupElementLast.borderBottom:1" i3="GroupElementLast.borderLeft:1" i4="GroupElementLast.borderRight:1" i5="GroupElementLast.borderTopL:1" i6="GroupElementLast.borderTopR:1" i7="GroupElementLast.borderBottomL:1" i8="GroupElementLast.borderBottomR:1" i9="GroupElementLast.borderCenter:1" />
+        <val key="GroupElementLast.dis#derive" value="GroupElementLast" />
+        <val key="GroupElementLast.dis#fgColor" value="cccccc" />
+        <val key="GroupElementLast.marUnit" value="0,2,2,2" />
+        <val key="GroupElementLast.margin" value="0,4,1,1" />
+        <val key="GroupElementLast.padUnit" value="2,2,2,2" />
+        <val key="GroupElementLast.padding" value="1,1,3,3" />
+        <val key="GroupElementLast.press#derive" value="GroupElementLast.sel" />
+        <border key="GroupElementLast.sel#border" type="image" i1="GroupElementLast.sel#borderTop:2" i2="GroupElementLast.sel#borderBottom:2" i3="GroupElementLast.sel#borderLeft:2" i4="GroupElementLast.sel#borderRight:2" i5="GroupElementLast.sel#borderTopL:2" i6="GroupElementLast.sel#borderTopR:2" i7="GroupElementLast.sel#borderBottomL:2" i8="GroupElementLast.sel#borderBottomR:2" i9="GroupElementLast.sel#borderCenter:2" />
+        <val key="GroupElementLast.sel#derive" value="GroupElementLast" />
+        <val key="GroupElementLast.sel#fgColor" value="ffffff" />
+        <border key="GroupElementOnly.border" type="image" i1="GroupElementOnly.borderTop:1" i2="GroupElementOnly.borderBottom:1" i3="GroupElementOnly.borderLeft:1" i4="GroupElementOnly.borderRight:1" i5="GroupElementOnly.borderTopL:1" i6="GroupElementOnly.borderTopR:1" i7="GroupElementOnly.borderBottomL:1" i8="GroupElementOnly.borderBottomR:1" i9="GroupElementOnly.borderCenter:1" />
+        <val key="GroupElementOnly.dis#derive" value="GroupElementOnly" />
+        <val key="GroupElementOnly.dis#fgColor" value="cccccc" />
+        <val key="GroupElementOnly.marUnit" value="2,2,2,2" />
+        <val key="GroupElementOnly.margin" value="1,4,1,1" />
+        <val key="GroupElementOnly.padUnit" value="2,2,2,2" />
+        <val key="GroupElementOnly.padding" value="1,1,3,3" />
+        <val key="GroupElementOnly.press#derive" value="GroupElementOnly.sel" />
+        <border key="GroupElementOnly.sel#border" type="image" i1="GroupElementOnly.sel#borderTop:1" i2="GroupElementOnly.sel#borderBottom:1" i3="GroupElementOnly.sel#borderLeft:1" i4="GroupElementOnly.sel#borderRight:1" i5="GroupElementOnly.sel#borderTopL:1" i6="GroupElementOnly.sel#borderTopR:1" i7="GroupElementOnly.sel#borderBottomL:1" i8="GroupElementOnly.sel#borderBottomR:1" i9="GroupElementOnly.sel#borderCenter:1" />
+        <val key="GroupElementOnly.sel#derive" value="GroupElementOnly" />
+        <val key="GroupElementOnly.sel#fgColor" value="ffffff" />
+        <val key="InfiniteProgress.transparency" value="0" />
+        <val key="Label.fgColor" value="6d6d72" />
+        <font key="Label.font" type="ttf" face="0" style="0" size="0" name="native:MainRegular" family="native:MainRegular" sizeSettings="3" actualSize="3.0" />
+        <val key="List.bgColor" value="ffffff" />
+        <val key="List.padding" value="0,0,0,0" />
+        <val key="List.sel#bgColor" value="ffffff" />
+        <val key="List.sel#padding" value="0,0,0,0" />
+        <val key="List.sel#transparency" value="255" />
+        <val key="List.transparency" value="255" />
+        <border key="ListRenderer.border" type="image" i1="ListRenderer.sel#border:6" i2="ListRenderer.sel#border:7" i3="ListRenderer.sel#border:8" i4="ListRenderer.sel#border:9" i5="ListRenderer.sel#border:1" i6="ListRenderer.sel#border:2" i7="ListRenderer.sel#border:3" i8="ListRenderer.sel#border:4" i9="ListRenderer.sel#border:5" />
+        <val key="ListRenderer.padUnit" value="2,2,2,2" />
+        <val key="ListRenderer.padding" value="2,2,2,2" />
+        <val key="ListRenderer.sel#bgColor" value="a4f90" />
+        <border key="ListRenderer.sel#border" type="empty" />
+        <val key="ListRenderer.sel#derive" value="ListRenderer" />
+        <val key="ListRenderer.sel#fgColor" value="ffffff" />
+        <val key="ListRenderer.sel#transparency" value="255" />
+        <val key="ListRenderer.transparency" value="255" />
+        <val key="MultiButton.bgColor" value="ffffff" />
+        <val key="MultiButton.bgImage" value="gray_line.jpg" />
+        <val key="MultiButton.bgType" value="30" />
+        <val key="MultiButton.margin" value="0,0,0,0" />
+        <val key="MultiButton.press#bgColor" value="d9d9d9" />
+        <val key="MultiButton.press#derive" value="MultiButton.sel" />
+        <val key="MultiButton.press#transparency" value="255" />
+        <val key="MultiButton.sel#bgColor" value="a4f90" />
+        <border key="MultiButton.sel#border" type="empty" />
+        <val key="MultiButton.sel#derive" value="MultiButton" />
+        <val key="MultiButton.sel#transparency" value="255" />
+        <val key="MultiButton.transparency" value="255" />
+        <val key="MultiLine1.dis#derive" value="MultiLine1" />
+        <val key="MultiLine1.fgColor" value="0" />
+        <font key="MultiLine1.font" type="system" face="0" style="1" size="16" />
+        <val key="MultiLine1.press#derive" value="MultiLine1" />
+        <val key="MultiLine1.press#fgColor" value="0" />
+        <val key="MultiLine1.sel#derive" value="MultiLine1" />
+        <val key="MultiLine1.sel#fgColor" value="ffffff" />
+        <val key="MultiLine1.transparency" value="0" />
+        <val key="MultiLine2.dis#derive" value="MultiLine2" />
+        <val key="MultiLine2.fgColor" value="3366ff" />
+        <val key="MultiLine2.margin" value="0,0,0,0" />
+        <val key="MultiLine2.press#derive" value="MultiLine2" />
+        <val key="MultiLine2.sel#derive" value="MultiLine2" />
+        <val key="MultiLine2.sel#fgColor" value="ffffff" />
+        <val key="MultiLine3.dis#derive" value="MultiLine3" />
+        <val key="MultiLine3.fgColor" value="cccccc" />
+        <val key="MultiLine3.margin" value="0,0,0,0" />
+        <val key="MultiLine3.press#derive" value="MultiLine3" />
+        <val key="MultiLine3.sel#derive" value="MultiLine3" />
+        <val key="MultiLine4.dis#derive" value="MultiLine4" />
+        <val key="MultiLine4.fgColor" value="cccccc" />
+        <val key="MultiLine4.margin" value="0,0,0,0" />
+        <val key="MultiLine4.press#derive" value="MultiLine4" />
+        <val key="MultiLine4.sel#derive" value="MultiLine4" />
+        <val key="OnOffSwitch.bgColor" value="f7f7f7" />
+        <val key="OnOffSwitch.sel#bgColor" value="f7f7f7" />
+        <val key="OnOffSwitch.sel#transparency" value="255" />
+        <val key="OnOffSwitch.transparency" value="255" />
+        <val key="PopupContentPane.padUnit" value="2,2,2,2" />
+        <val key="PopupContentPane.padding" value="0,4,4,4" />
+        <border key="PopupDialog.border" type="image" i1="PopupDialog.borderTop_2.png" i2="PopupDialog.borderBottom_2.png" i3="PopupDialog.borderLeft_2.png" i4="PopupDialog.borderRight_2.png" i5="PopupDialog.borderTopL_2.png" i6="PopupDialog.borderTopR_2.png" i7="PopupDialog.borderBottomL_2.png" i8="PopupDialog.borderBottomR_2.png" i9="PopupDialog.borderCenter_2.png" />
+        <val key="PopupDialog.margin" value="0,0,0,0" />
+        <val key="PopupDialog.padUnit" value="2,2,2,2" />
+        <val key="PopupDialog.padding" value="0,0,0,0" />
+        <val key="PopupDialog.transparency" value="0" />
+        <val key="PopupDialogTitle.align" value="4" />
+        <border key="PopupDialogTitle.border" type="image" i1="PopupDialogTitle.borderTop_1.png" i2="PopupDialogTitle.borderBottom_1.png" i3="PopupDialogTitle.borderLeft_1.png" i4="PopupDialogTitle.borderRight_1.png" i5="PopupDialogTitle.borderTopL_1.png" i6="PopupDialogTitle.borderTopR_1.png" i7="PopupDialogTitle.borderBottomL_1.png" i8="PopupDialogTitle.borderBottomR_1.png" i9="PopupDialogTitle.borderCenter_1.png" />
+        <val key="PopupDialogTitle.derive" value="DialogTitle" />
+        <val key="PopupDialogTitle.fgColor" value="ffffff" />
+        <font key="PopupDialogTitle.font" type="system" face="0" style="1" size="16" />
+        <val key="PopupDialogTitle.margin" value="0,0,0,0" />
+        <val key="PopupDialogTitle.padUnit" value="2,2,0,2" />
+        <val key="PopupDialogTitle.padding" value="2,0,3,3" />
+        <val key="PopupDialogTitle.transparency" value="0" />
+        <val key="Scroll.padding" value="0,0,0,0" />
+        <val key="ScrollThumb.padding" value="0,0,0,0" />
+        <val key="Slider.bgColor" value="7aff" />
+        <val key="Slider.bgImage" value="slider-empty.png" />
+        <val key="Slider.bgType" value="29" />
+        <val key="Slider.fgColor" value="0" />
+        <val key="Slider.marUnit" value="2,2,2,2" />
+        <val key="Slider.margin" value="1,1,2,2" />
+        <val key="Slider.padding" value="0,0,0,0" />
+        <val key="Slider.sel#bgColor" value="7aff" />
+        <val key="Slider.sel#bgImage" value="slider-empty.png" />
+        <val key="Slider.sel#bgType" value="29" />
+        <val key="Slider.sel#fgColor" value="0" />
+        <val key="Slider.sel#marUnit" value="2,2,2,2" />
+        <val key="Slider.sel#margin" value="1,1,2,2" />
+        <val key="Slider.sel#padding" value="0,0,0,0" />
+        <val key="Slider.sel#transparency" value="0" />
+        <val key="Slider.transparency" value="0" />
+        <val key="SliderFull.bgColor" value="7aff" />
+        <val key="SliderFull.bgImage" value="slider-full.png" />
+        <val key="SliderFull.bgType" value="29" />
+        <val key="SliderFull.fgColor" value="0" />
+        <val key="SliderFull.marUnit" value="2,2,2,2" />
+        <val key="SliderFull.margin" value="1,1,2,2" />
+        <val key="SliderFull.padding" value="0,0,0,0" />
+        <val key="SliderFull.sel#bgColor" value="7aff" />
+        <val key="SliderFull.sel#bgImage" value="slider-full.png" />
+        <val key="SliderFull.sel#bgType" value="29" />
+        <val key="SliderFull.sel#fgColor" value="0" />
+        <val key="SliderFull.sel#marUnit" value="2,2,2,2" />
+        <val key="SliderFull.sel#margin" value="1,1,2,2" />
+        <val key="SliderFull.sel#padding" value="0,0,0,0" />
+        <val key="SliderFull.sel#transparency" value="0" />
+        <val key="SliderFull.transparency" value="0" />
+        <border key="Spinner.border" type="empty" />
+        <border key="Spinner.sel#border" type="empty" />
+        <val key="SpinnerRenderer.fgColor" value="777777" />
+        <font key="SpinnerRenderer.font" type="system" face="0" style="0" size="16" />
+        <val key="SpinnerRenderer.padUnit" value="2,0,2,0" />
+        <val key="SpinnerRenderer.padding" value="1,1,0,0" />
+        <val key="SpinnerRenderer.sel#derive" value="SpinnerRenderer" />
+        <val key="SpinnerRenderer.sel#fgColor" value="0" />
+        <font key="SpinnerRenderer.sel#font" type="system" face="0" style="0" size="16" />
+        <val key="SpinnerSeparator.margin" value="0,0,0,0" />
+        <val key="SpinnerSeparator.padUnit" value="0,2,0,0" />
+        <val key="SpinnerSeparator.padding" value="0,0,2,0" />
+        <val key="SpinnerWrapper.bgColor" value="ffffff" />
+        <border key="SpinnerWrapper.border" type="empty" />
+        <font key="SpinnerWrapper.font" type="system" face="0" style="0" size="16" />
+        <val key="SpinnerWrapper.padUnit" value="2,2,2,2" />
+        <val key="SpinnerWrapper.padding" value="2,2,2,2" />
+        <val key="SpinnerWrapper.transparency" value="255" />
+        <val key="StatusBar.margin" value="0,0,0,0" />
+        <val key="StatusBar.padUnit" value="2,0,2,0" />
+        <val key="StatusBar.padding" value="1,2,0,0" />
+        <val key="StatusBar.transparency" value="0" />
+        <val key="StatusBarSideMenu.margin" value="0,0,0,0" />
+        <val key="StatusBarSideMenu.padUnit" value="2,0,2,0" />
+        <val key="StatusBarSideMenu.padding" value="1,2,0,0" />
+        <val key="StatusBarSideMenu.transparency" value="0" />
+        <val key="TODAY.derive" value="SpinnerRenderer" />
+        <val key="TODAY.fgColor" value="a4f90" />
+        <val key="TODAY.sel#derive" value="SpinnerRenderer.sel" />
+        <val key="TODAY.sel#fgColor" value="a4f90" />
+        <val key="TODAY.textDecoration" value="16" />
+        <val key="Tab.align" value="4" />
+        <val key="Tab.bgColor" value="f8f8f8" />
+        <val key="Tab.fgColor" value="929292" />
+        <font key="Tab.font" type="system" face="0" style="0" size="8" />
+        <val key="Tab.margin" value="0,0,0,0" />
+        <val key="Tab.press#derive" value="Tab.sel" />
+        <val key="Tab.sel#align" value="4" />
+        <val key="Tab.sel#bgColor" value="f8f8f8" />
+        <val key="Tab.sel#derive" value="Tab" />
+        <val key="Tab.sel#fgColor" value="1987ff" />
+        <font key="Tab.sel#font" type="system" face="0" style="0" size="8" />
+        <val key="Tab.sel#margin" value="0,0,0,0" />
+        <val key="Tab.sel#transparency" value="0" />
+        <val key="Tab.transparency" value="0" />
+        <val key="Table.derive" value="List" />
+        <val key="Tabs.margin" value="0,0,0,0" />
+        <border key="TabsContainer.border" type="image" i1="TabsContainer.borderTop_1.png" i2="TabsContainer.borderBottom_1.png" i3="TabsContainer.borderLeft_1.png" i4="TabsContainer.borderRight_1.png" i5="TabsContainer.borderTopL_1.png" i6="TabsContainer.borderTopR_1.png" i7="TabsContainer.borderBottomL_1.png" i8="TabsContainer.borderBottomR_1.png" i9="TabsContainer.borderCenter_1.png" />
+        <val key="TabsContainer.margin" value="0,0,0,0" />
+        <val key="TabsContainer.padding" value="0,0,0,0" />
+        <val key="TextArea.bgColor" value="ffffff" />
+        <border key="TextArea.border" type="line" thickness="1" color="12566463" />
+        <val key="TextArea.fgColor" value="0" />
+        <val key="TextArea.marUnit" value="2,2,2,2" />
+        <val key="TextArea.margin" value="1,1,1,1" />
+        <val key="TextArea.sel#bgColor" value="ffffff" />
+        <border key="TextArea.sel#border" type="line" thickness="1" color="12566463" />
+        <val key="TextArea.sel#fgColor" value="0" />
+        <val key="TextArea.sel#marUnit" value="2,2,2,2" />
+        <val key="TextArea.sel#margin" value="1,1,1,1" />
+        <val key="TextArea.sel#transparency" value="255" />
+        <val key="TextArea.transparency" value="255" />
+        <val key="TextField.bgColor" value="ffffff" />
+        <border key="TextField.border" type="line" thickness="1" color="12566463" />
+        <val key="TextField.fgColor" value="0" />
+        <val key="TextField.marUnit" value="2,2,2,2" />
+        <val key="TextField.margin" value="1,1,1,1" />
+        <val key="TextField.sel#bgColor" value="ffffff" />
+        <border key="TextField.sel#border" type="line" thickness="1" color="12566463" />
+        <val key="TextField.sel#fgColor" value="0" />
+        <val key="TextField.sel#marUnit" value="2,2,2,2" />
+        <val key="TextField.sel#margin" value="1,1,1,1" />
+        <val key="TextField.sel#transparency" value="255" />
+        <val key="TextField.transparency" value="255" />
+        <border key="TextHint.border" type="empty" />
+        <val key="TextHint.derive" value="TextField" />
+        <val key="TextHint.fgColor" value="888888" />
+        <font key="TextHint.font" type="system" face="0" style="0" size="0" />
+        <val key="Title.fgColor" value="0" />
+        <font key="Title.font" type="system" face="0" style="1" size="0" />
+        <val key="Title.margin" value="0,0,0,0" />
+        <val key="Title.padUnit" value="0,2,2,2" />
+        <val key="Title.padding" value="0,1,1,1" />
+        <val key="Title.transparency" value="0" />
+        <border key="TitleArea.border" type="image" i1="TitleArea.borderTop_1.png" i2="TitleArea.borderBottom_1.png" i3="TitleArea.borderLeft_1.png" i4="TitleArea.borderRight_1.png" i5="TitleArea.borderTopL_1.png" i6="TitleArea.borderTopR_1.png" i7="TitleArea.borderBottomL_1.png" i8="TitleArea.borderBottomR_1.png" i9="TitleArea.borderCenter_1.png" />
+        <val key="TitleArea.marUnit" value="2,2,2,2" />
+        <val key="TitleArea.margin" value="0,0,0,0" />
+        <val key="TitleArea.padUnit" value="2,2,0,0" />
+        <val key="TitleArea.padding" value="1,0,0,0" />
+        <val key="TitleCommand.align" value="4" />
+        <gradient key="TitleCommand.bgGradient" color1="0" color2="0" posX="0.5" posY="0.5" radius="1.0" />
+        <val key="TitleCommand.bgType" value="0" />
+        <val key="TitleCommand.derive" value="BackCommand" />
+        <val key="TitleCommand.fgColor" value="7aff" />
+        <val key="TitleCommand.margin" value="0,0,0,0" />
+        <val key="TitleCommand.padUnit" value="0,2,2,2" />
+        <val key="TitleCommand.padding" value="0,1,1,1" />
+        <gradient key="TitleCommand.press#bgGradient" color1="0" color2="0" posX="0.5" posY="0.5" radius="1.0" />
+        <val key="TitleCommand.press#bgType" value="0" />
+        <val key="TitleCommand.press#derive" value="TitleCommand" />
+        <val key="TitleCommand.press#fgColor" value="cde4ff" />
+        <val key="TitleCommand.sel#derive" value="TitleCommand" />
+        <val key="TitleLabel.fgColor" value="4c566c" />
+        <font key="TitleLabel.font" type="system" face="0" style="1" size="0" />
+        <val key="TitleLabel.textDecoration" value="16" />
+        <border key="ToggleButton.border" type="image" i1="ToggleButton.borderTop_1.png" i2="ToggleButton.borderBottom_1.png" i3="ToggleButton.borderLeft_1.png" i4="ToggleButton.borderRight_1.png" i5="ToggleButton.borderTopL_1.png" i6="ToggleButton.borderTopR_1.png" i7="ToggleButton.borderBottomL_1.png" i8="ToggleButton.borderBottomR_1.png" i9="ToggleButton.borderCenter_1.png" />
+        <val key="ToggleButton.derive" value="Button" />
+        <val key="ToggleButton.fgColor" value="7aff" />
+        <val key="ToggleButton.marUnit" value="2,0,2,0" />
+        <val key="ToggleButton.margin" value="1,1,0,0" />
+        <val key="ToggleButton.press#derive" value="ToggleButton.sel" />
+        <border key="ToggleButton.sel#border" type="image" i1="ToggleButton.sel#borderTop_1.png" i2="ToggleButton.sel#borderBottom_1.png" i3="ToggleButton.sel#borderLeft_1.png" i4="ToggleButton.sel#borderRight_1.png" i5="ToggleButton.sel#borderTopL_1.png" i6="ToggleButton.sel#borderTopR_1.png" i7="ToggleButton.sel#borderBottomL_1.png" i8="ToggleButton.sel#borderBottomR_1.png" i9="ToggleButton.sel#borderCenter_1.png" />
+        <val key="ToggleButton.sel#derive" value="Button" />
+        <val key="ToggleButton.sel#fgColor" value="ffffff" />
+        <val key="ToggleButton.sel#marUnit" value="2,0,2,0" />
+        <val key="ToggleButton.sel#margin" value="1,1,0,0" />
+        <border key="ToggleButtonFirst.border" type="image" i1="ToggleButtonFirst.borderTop_1.png" i2="ToggleButtonFirst.borderBottom_1.png" i3="ToggleButtonFirst.borderLeft_1.png" i4="ToggleButtonFirst.borderRight_1.png" i5="ToggleButtonFirst.borderTopL_1.png" i6="ToggleButtonFirst.borderTopR_1.png" i7="ToggleButtonFirst.borderBottomL_1.png" i8="ToggleButtonFirst.borderBottomR_1.png" i9="ToggleButtonFirst.borderCenter_1.png" />
+        <val key="ToggleButtonFirst.derive" value="ToggleButton" />
+        <val key="ToggleButtonFirst.fgColor" value="7aff" />
+        <val key="ToggleButtonFirst.press#derive" value="ToggleButtonFirst.sel" />
+        <border key="ToggleButtonFirst.sel#border" type="image" i1="ToggleButtonFirst.sel#borderTop_1.png" i2="ToggleButtonFirst.sel#borderBottom_1.png" i3="ToggleButtonFirst.sel#borderLeft_1.png" i4="ToggleButtonFirst.sel#borderRight_1.png" i5="ToggleButtonFirst.sel#borderTopL_1.png" i6="ToggleButtonFirst.sel#borderTopR_1.png" i7="ToggleButtonFirst.sel#borderBottomL_1.png" i8="ToggleButtonFirst.sel#borderBottomR_1.png" i9="ToggleButtonFirst.sel#borderCenter_1.png" />
+        <val key="ToggleButtonFirst.sel#derive" value="ToggleButton" />
+        <val key="ToggleButtonFirst.sel#fgColor" value="ffffff" />
+        <border key="ToggleButtonLast.border" type="image" i1="ToggleButtonLast.borderTop_1.png" i2="ToggleButtonLast.borderBottom_1.png" i3="ToggleButtonLast.borderLeft_1.png" i4="ToggleButtonLast.borderRight_1.png" i5="ToggleButtonLast.borderTopL_1.png" i6="ToggleButtonLast.borderTopR_1.png" i7="ToggleButtonLast.borderBottomL_1.png" i8="ToggleButtonLast.borderBottomR_1.png" i9="ToggleButtonLast.borderCenter_1.png" />
+        <val key="ToggleButtonLast.derive" value="ToggleButton" />
+        <val key="ToggleButtonLast.fgColor" value="7aff" />
+        <val key="ToggleButtonLast.press#derive" value="ToggleButtonLast.sel" />
+        <border key="ToggleButtonLast.sel#border" type="image" i1="ToggleButtonLast.sel#borderTop_1.png" i2="ToggleButtonLast.sel#borderBottom_1.png" i3="ToggleButtonLast.sel#borderLeft_1.png" i4="ToggleButtonLast.sel#borderRight_1.png" i5="ToggleButtonLast.sel#borderTopL_1.png" i6="ToggleButtonLast.sel#borderTopR_1.png" i7="ToggleButtonLast.sel#borderBottomL_1.png" i8="ToggleButtonLast.sel#borderBottomR_1.png" i9="ToggleButtonLast.sel#borderCenter_1.png" />
+        <val key="ToggleButtonLast.sel#derive" value="ToggleButton" />
+        <val key="ToggleButtonLast.sel#fgColor" value="ffffff" />
+        <val key="ToggleButtonOnly.derive" value="ToggleButtonFirst" />
+        <val key="ToggleButtonOnly.press#derive" value="ToggleButtonOnly.sel" />
+        <val key="ToggleButtonOnly.sel#derive" value="ToggleButtonFirst.sel" />
+        <border key="TouchCommand.border" type="imageH" i1="CommandBar" i2="CommandBar" i3="CommandBar" />
+        <val key="TouchCommand.fgColor" value="ffffff" />
+        <val key="TouchCommand.press#derive" value="TouchCommand" />
+        <val key="TouchCommand.sel#derive" value="TouchCommand" />
+        <val key="TouchCommand.textDecoration" value="8" />
+        <val key="TouchCommand.transparency" value="0" />
+        <val key="bgColor" value="ffffff" />
+        <val key="fgColor" value="0" />
+        <font key="font" type="ttf" face="0" style="1" size="0" name="native:MainRegular" family="native:MainRegular" sizeSettings="3" actualSize="3.0" />
+        <val key="padUnit" value="2,2,2,2" />
+        <val key="padding" value="1,1,1,1" />
+        <val key="press#padUnit" value="2,2,2,2" />
+        <val key="press#padding" value="1,1,1,1" />
+        <val key="sel#padUnit" value="2,2,2,2" />
+        <val key="sel#padding" value="1,1,1,1" />
+        <val key="sel#transparency" value="0" />
+        <val key="transparency" value="0" />
+    </theme>
+    <image name="ios_switch_mask.png" type="multi"  />
+    <image name="ios_switch_off.png" type="multi"  />
+    <image name="ios_switch_on.png" type="multi"  />
+    <image name="ListRenderer.sel#border:1"  />
+    <image name="ListRenderer.sel#border:2"  />
+    <image name="ListRenderer.sel#border:3"  />
+    <image name="ListRenderer.sel#border:4"  />
+    <image name="ListRenderer.sel#border:5"  />
+    <image name="ListRenderer.sel#border:6"  />
+    <image name="ListRenderer.sel#border:7"  />
+    <image name="ListRenderer.sel#border:8"  />
+    <image name="ListRenderer.sel#border:9"  />
+    <image name="PlayMedia.png" type="multi"  />
+    <image name="Popup_arrow.png" type="multi"  />
+    <image name="Popup_arrow_bottom.png" type="multi"  />
+    <image name="Popup_arrow_left.png" type="multi"  />
+    <image name="Popup_arrow_right.png" type="multi"  />
+    <image name="PopupDialog.borderBottom_2.png" type="multi"  />
+    <image name="PopupDialog.borderBottomL_2.png" type="multi"  />
+    <image name="PopupDialog.borderBottomR_2.png" type="multi"  />
+    <image name="PopupDialog.borderCenter_2.png" type="multi"  />
+    <image name="PopupDialog.borderLeft_2.png" type="multi"  />
+    <image name="PopupDialog.borderRight_2.png" type="multi"  />
+    <image name="PopupDialog.borderTop_2.png" type="multi"  />
+    <image name="PopupDialog.borderTopL_2.png" type="multi"  />
+    <image name="PopupDialog.borderTopR_2.png" type="multi"  />
+    <image name="PopupDialogTitle.borderBottom_1.png" type="multi"  />
+    <image name="PopupDialogTitle.borderBottomL_1.png" type="multi"  />
+    <image name="PopupDialogTitle.borderBottomR_1.png" type="multi"  />
+    <image name="PopupDialogTitle.borderCenter_1.png" type="multi"  />
+    <image name="PopupDialogTitle.borderLeft_1.png" type="multi"  />
+    <image name="PopupDialogTitle.borderRight_1.png" type="multi"  />
+    <image name="PopupDialogTitle.borderTop_1.png" type="multi"  />
+    <image name="PopupDialogTitle.borderTopL_1.png" type="multi"  />
+    <image name="PopupDialogTitle.borderTopR_1.png" type="multi"  />
+    <image name="slider-empty.png"  />
+    <image name="slider-full.png"  />
+    <image name="SpinnerOverlay.borderBottom:1" type="multi"  />
+    <image name="SpinnerOverlay.borderBottomL:1" type="multi"  />
+    <image name="SpinnerOverlay.borderBottomR:1" type="multi"  />
+    <image name="SpinnerOverlay.borderCenter:1" type="multi"  />
+    <image name="SpinnerOverlay.borderLeft:1" type="multi"  />
+    <image name="SpinnerOverlay.borderRight:1" type="multi"  />
+    <image name="SpinnerOverlay.borderTop:1" type="multi"  />
+    <image name="SpinnerOverlay.borderTopL:1" type="multi"  />
+    <image name="SpinnerOverlay.borderTopR:1" type="multi"  />
+    <image name="SpinnerSeparator.png"  />
+    <image name="Tab.borderBottom:1" type="multi"  />
+    <image name="Tab.borderBottomL:1" type="multi"  />
+    <image name="Tab.borderBottomR:1" type="multi"  />
+    <image name="Tab.borderCenter:1" type="multi"  />
+    <image name="Tab.borderLeft:1" type="multi"  />
+    <image name="Tab.borderRight:1" type="multi"  />
+    <image name="Tab.borderTop:1" type="multi"  />
+    <image name="Tab.borderTopL:1" type="multi"  />
+    <image name="Tab.borderTopR:1" type="multi"  />
+    <image name="Tab.sel#borderBottom:1" type="multi"  />
+    <image name="Tab.sel#borderBottomL:1" type="multi"  />
+    <image name="Tab.sel#borderBottomR:1" type="multi"  />
+    <image name="Tab.sel#borderCenter:1" type="multi"  />
+    <image name="Tab.sel#borderLeft:1" type="multi"  />
+    <image name="Tab.sel#borderRight:1" type="multi"  />
+    <image name="Tab.sel#borderTop:1" type="multi"  />
+    <image name="Tab.sel#borderTopL:1" type="multi"  />
+    <image name="Tab.sel#borderTopR:1" type="multi"  />
+    <image name="tab_selected_icon.png" type="multi"  />
+    <image name="tab_unselected_icon.png" type="multi"  />
+    <image name="TabsContainer.borderBottom_1.png" type="multi"  />
+    <image name="TabsContainer.borderBottomL_1.png" type="multi"  />
+    <image name="TabsContainer.borderBottomR_1.png" type="multi"  />
+    <image name="TabsContainer.borderCenter_1.png" type="multi"  />
+    <image name="TabsContainer.borderLeft_1.png" type="multi"  />
+    <image name="TabsContainer.borderRight_1.png" type="multi"  />
+    <image name="TabsContainer.borderTop_1.png" type="multi"  />
+    <image name="TabsContainer.borderTopL_1.png" type="multi"  />
+    <image name="TabsContainer.borderTopR_1.png" type="multi"  />
+    <image name="TextField.sel#border:1"  />
+    <image name="TextField.sel#border:2"  />
+    <image name="TextField.sel#border:3"  />
+    <image name="TextField.sel#border:4"  />
+    <image name="TextField.sel#border:5"  />
+    <image name="TextField.sel#border:6"  />
+    <image name="TextField.sel#border:7"  />
+    <image name="TextField.sel#border:8"  />
+    <image name="TextField.sel#border:9"  />
+    <image name="title_command_pressed_c.png" type="multi"  />
+    <image name="title_command_pressed_l.png" type="multi"  />
+    <image name="title_command_pressed_r.png" type="multi"  />
+    <image name="TitleArea.borderBottom_1.png" type="multi"  />
+    <image name="TitleArea.borderBottomL_1.png" type="multi"  />
+    <image name="TitleArea.borderBottomR_1.png" type="multi"  />
+    <image name="TitleArea.borderCenter_1.png" type="multi"  />
+    <image name="TitleArea.borderLeft_1.png" type="multi"  />
+    <image name="TitleArea.borderRight_1.png" type="multi"  />
+    <image name="TitleArea.borderTop_1.png" type="multi"  />
+    <image name="TitleArea.borderTopL_1.png" type="multi"  />
+    <image name="TitleArea.borderTopR_1.png" type="multi"  />
+    <image name="ToggleButton.borderBottom:1" type="multi"  />
+    <image name="ToggleButton.borderBottom_1.png" type="multi"  />
+    <image name="ToggleButton.borderBottomL:1" type="multi"  />
+    <image name="ToggleButton.borderBottomL_1.png" type="multi"  />
+    <image name="ToggleButton.borderBottomR:1" type="multi"  />
+    <image name="ToggleButton.borderBottomR_1.png" type="multi"  />
+    <image name="ToggleButton.borderCenter:1" type="multi"  />
+    <image name="ToggleButton.borderCenter_1.png" type="multi"  />
+    <image name="ToggleButton.borderLeft:1" type="multi"  />
+    <image name="ToggleButton.borderLeft_1.png" type="multi"  />
+    <image name="ToggleButton.borderRight:1" type="multi"  />
+    <image name="ToggleButton.borderRight_1.png" type="multi"  />
+    <image name="ToggleButton.borderTop:1" type="multi"  />
+    <image name="ToggleButton.borderTop_1.png" type="multi"  />
+    <image name="ToggleButton.borderTopL:1" type="multi"  />
+    <image name="ToggleButton.borderTopL_1.png" type="multi"  />
+    <image name="ToggleButton.borderTopR:1" type="multi"  />
+    <image name="ToggleButton.borderTopR_1.png" type="multi"  />
+    <image name="ToggleButton.sel#borderBottom:1" type="multi"  />
+    <image name="ToggleButton.sel#borderBottom_1.png"  />
+    <image name="ToggleButton.sel#borderBottomL:1" type="multi"  />
+    <image name="ToggleButton.sel#borderBottomL_1.png"  />
+    <image name="ToggleButton.sel#borderBottomR:1" type="multi"  />
+    <image name="ToggleButton.sel#borderBottomR_1.png"  />
+    <image name="ToggleButton.sel#borderCenter:1" type="multi"  />
+    <image name="ToggleButton.sel#borderCenter_1.png"  />
+    <image name="ToggleButton.sel#borderLeft:1" type="multi"  />
+    <image name="ToggleButton.sel#borderLeft_1.png"  />
+    <image name="ToggleButton.sel#borderRight:1" type="multi"  />
+    <image name="ToggleButton.sel#borderRight_1.png"  />
+    <image name="ToggleButton.sel#borderTop:1" type="multi"  />
+    <image name="ToggleButton.sel#borderTop_1.png"  />
+    <image name="ToggleButton.sel#borderTopL:1" type="multi"  />
+    <image name="ToggleButton.sel#borderTopL_1.png"  />
+    <image name="ToggleButton.sel#borderTopR:1" type="multi"  />
+    <image name="ToggleButton.sel#borderTopR_1.png"  />
+    <image name="ToggleButtonFirst.borderBottom:1" type="multi"  />
+    <image name="ToggleButtonFirst.borderBottom_1.png" type="multi"  />
+    <image name="ToggleButtonFirst.borderBottomL:1" type="multi"  />
+    <image name="ToggleButtonFirst.borderBottomL_1.png" type="multi"  />
+    <image name="ToggleButtonFirst.borderBottomR:1" type="multi"  />
+    <image name="ToggleButtonFirst.borderBottomR_1.png" type="multi"  />
+    <image name="ToggleButtonFirst.borderCenter:1" type="multi"  />
+    <image name="ToggleButtonFirst.borderCenter_1.png" type="multi"  />
+    <image name="ToggleButtonFirst.borderLeft:1" type="multi"  />
+    <image name="ToggleButtonFirst.borderLeft_1.png" type="multi"  />
+    <image name="ToggleButtonFirst.borderRight:1" type="multi"  />
+    <image name="ToggleButtonFirst.borderRight_1.png" type="multi"  />
+    <image name="ToggleButtonFirst.borderTop:1" type="multi"  />
+    <image name="ToggleButtonFirst.borderTop_1.png" type="multi"  />
+    <image name="ToggleButtonFirst.borderTopL:1" type="multi"  />
+    <image name="ToggleButtonFirst.borderTopL_1.png" type="multi"  />
+    <image name="ToggleButtonFirst.borderTopR:1" type="multi"  />
+    <image name="ToggleButtonFirst.borderTopR_1.png" type="multi"  />
+    <image name="ToggleButtonFirst.sel#borderBottom:1" type="multi"  />
+    <image name="ToggleButtonFirst.sel#borderBottom_1.png" type="multi"  />
+    <image name="ToggleButtonFirst.sel#borderBottomL:1" type="multi"  />
+    <image name="ToggleButtonFirst.sel#borderBottomL_1.png" type="multi"  />
+    <image name="ToggleButtonFirst.sel#borderBottomR:1" type="multi"  />
+    <image name="ToggleButtonFirst.sel#borderBottomR_1.png" type="multi"  />
+    <image name="ToggleButtonFirst.sel#borderCenter:1" type="multi"  />
+    <image name="ToggleButtonFirst.sel#borderCenter_1.png" type="multi"  />
+    <image name="ToggleButtonFirst.sel#borderLeft:1" type="multi"  />
+    <image name="ToggleButtonFirst.sel#borderLeft_1.png" type="multi"  />
+    <image name="ToggleButtonFirst.sel#borderRight:1" type="multi"  />
+    <image name="ToggleButtonFirst.sel#borderRight_1.png" type="multi"  />
+    <image name="ToggleButtonFirst.sel#borderTop:1" type="multi"  />
+    <image name="ToggleButtonFirst.sel#borderTop_1.png" type="multi"  />
+    <image name="ToggleButtonFirst.sel#borderTopL:1" type="multi"  />
+    <image name="ToggleButtonFirst.sel#borderTopL_1.png" type="multi"  />
+    <image name="ToggleButtonFirst.sel#borderTopR:1" type="multi"  />
+    <image name="ToggleButtonFirst.sel#borderTopR_1.png" type="multi"  />
+    <image name="ToggleButtonLast.borderBottom:1" type="multi"  />
+    <image name="ToggleButtonLast.borderBottom_1.png" type="multi"  />
+    <image name="ToggleButtonLast.borderBottomL:1" type="multi"  />
+    <image name="ToggleButtonLast.borderBottomL_1.png" type="multi"  />
+    <image name="ToggleButtonLast.borderBottomR:1" type="multi"  />
+    <image name="ToggleButtonLast.borderBottomR_1.png" type="multi"  />
+    <image name="ToggleButtonLast.borderCenter:1" type="multi"  />
+    <image name="ToggleButtonLast.borderCenter_1.png" type="multi"  />
+    <image name="ToggleButtonLast.borderLeft:1" type="multi"  />
+    <image name="ToggleButtonLast.borderLeft_1.png" type="multi"  />
+    <image name="ToggleButtonLast.borderRight:1" type="multi"  />
+    <image name="ToggleButtonLast.borderRight_1.png" type="multi"  />
+    <image name="ToggleButtonLast.borderTop:1" type="multi"  />
+    <image name="ToggleButtonLast.borderTop_1.png" type="multi"  />
+    <image name="ToggleButtonLast.borderTopL:1" type="multi"  />
+    <image name="ToggleButtonLast.borderTopL_1.png" type="multi"  />
+    <image name="ToggleButtonLast.borderTopR:1" type="multi"  />
+    <image name="ToggleButtonLast.borderTopR_1.png" type="multi"  />
+    <image name="ToggleButtonLast.sel#borderBottom:1" type="multi"  />
+    <image name="ToggleButtonLast.sel#borderBottom_1.png" type="multi"  />
+    <image name="ToggleButtonLast.sel#borderBottomL:1" type="multi"  />
+    <image name="ToggleButtonLast.sel#borderBottomL_1.png" type="multi"  />
+    <image name="ToggleButtonLast.sel#borderBottomR:1" type="multi"  />
+    <image name="ToggleButtonLast.sel#borderBottomR_1.png" type="multi"  />
+    <image name="ToggleButtonLast.sel#borderCenter:1" type="multi"  />
+    <image name="ToggleButtonLast.sel#borderCenter_1.png" type="multi"  />
+    <image name="ToggleButtonLast.sel#borderLeft:1" type="multi"  />
+    <image name="ToggleButtonLast.sel#borderLeft_1.png" type="multi"  />
+    <image name="ToggleButtonLast.sel#borderRight:1" type="multi"  />
+    <image name="ToggleButtonLast.sel#borderRight_1.png" type="multi"  />
+    <image name="ToggleButtonLast.sel#borderTop:1" type="multi"  />
+    <image name="ToggleButtonLast.sel#borderTop_1.png" type="multi"  />
+    <image name="ToggleButtonLast.sel#borderTopL:1" type="multi"  />
+    <image name="ToggleButtonLast.sel#borderTopL_1.png" type="multi"  />
+    <image name="ToggleButtonLast.sel#borderTopR:1" type="multi"  />
+    <image name="ToggleButtonLast.sel#borderTopR_1.png" type="multi"  />
+</resource>
