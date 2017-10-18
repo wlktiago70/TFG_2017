@@ -61,7 +61,7 @@ public class Game {
         //cria 2 jogadores
         Player p1, p2, p3;
                 
-        p1 = new Player("player1",clans.get(0), PlayerOcupationEnum.eCcmputacao);
+        p1 = new Player("player1",clans.get(0), PlayerOcupationEnum.eComputacao);
         this.players.add(p1);
         
         p2 = new Player("player2",clans.get(1), PlayerOcupationEnum.eControleAutomacao);

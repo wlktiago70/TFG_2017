@@ -17,10 +17,10 @@ public enum PlayerOcupationEnum {
     
     eEnergia,
     eMateriais,
-    eMecanica	,
+    eMecanica,
     eMecanicaAeronautica,
     eProducao,
-    eCcmputacao,
+    eComputacao,
     eControleAutomacao,
     eEletronica,	
     eAmbiental,
