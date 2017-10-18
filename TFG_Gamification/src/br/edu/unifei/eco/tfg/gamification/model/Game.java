@@ -73,7 +73,7 @@ public class Game {
 
         //player 1 cria uma sidequest (com a msm reward da mainquest para fins de simplificaçao)
         p1.setPrivileges(PrivilegeEnum.experienced);
-        SideQuest sq = p1.createSideQuest("SideTst", "Side Quest test", rw, ClassificationEnum.social);
+        SideQuest sq = p1.createSideQuest("SideTst", "Side Quest test", rw, ClassificationEnum.other);
         
         Goal sqGoal = new ManualValidation("SideQuest Goal Teste", sq);
         List<Goal> sqGoals = new ArrayList<Goal>();

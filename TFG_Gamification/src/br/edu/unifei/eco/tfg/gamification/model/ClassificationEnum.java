@@ -10,12 +10,11 @@ package br.edu.unifei.eco.tfg.gamification.model;
  * @author Paulo
  */
 public enum ClassificationEnum {
-    social,
     athletics,
     cultural,
-    extracurricular, 
     instructional,
-    volunteering
+    volunteering,
+    other
     
     
 }
