@@ -107,7 +107,7 @@ public class Home extends TemplateForm{
         //Houses images
         width = 65;
         try {
-            Image houses = Image.createImage("/clans.jpg").scaled(2*width,2*width);
+            Image houses = Image.createImage("/Clans.jpg").scaled(2*width,2*width);
             Image roundSquareMask = Image.createImage("/#sqrMask.png").scaled(width,width);
             mask = roundSquareMask.createMask();
             imgHouses[0] = houses.subImage(0, 0, width, width, false);
