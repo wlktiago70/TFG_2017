@@ -41,7 +41,6 @@ public class Game {
         
         this.mainQuests.add(mq);
         
-        
         //inicia os clans
         Clan c1,c2,c3,c4;
         
@@ -61,60 +60,45 @@ public class Game {
         //cria 2 jogadores
         Player p1, p2, p3;
                 
-        p1 = new Player("player1",clans.get(0), PlayerOcupationEnum.eComputacao);
+        p1 = new Player("player1",clans.get(0));
         this.players.add(p1);
         
-        p2 = new Player("player2",clans.get(1), PlayerOcupationEnum.eControleAutomacao);
+        p2 = new Player("player2",clans.get(1));
         this.players.add(p2);
         
-        p3 = new Player("player3",clans.get(1), PlayerOcupationEnum.eEletronica);
+        p3 = new Player("player3",clans.get(1));
         this.players.add(p3);
         
-
-        //player 1 cria uma sidequest (com a msm reward da mainquest para fins de simplificaçao)
-        p1.setPrivileges(PrivilegeEnum.experienced);
-        SideQuest sq = p1.createSideQuest("SideTst", "Side Quest test", rw, ClassificationEnum.other);
         
-        Goal sqGoal = new ManualValidation("SideQuest Goal Teste", sq);
-        List<Goal> sqGoals = new ArrayList<Goal>();
-        sqGoals.add(sqGoal);
-        
-        sq.setGoals(sqGoals);
-        
-        this.sideQuests.add(sq);
-        
-        //player 2 e 3 entram na side quest
-        p2.enlist(sq);
-        p3.enlist(sq);
-        
+        //player 1 cria uma sidequest (com a msm goal e reward da mainquest para fins de simplificaçao)
+        SideQuest sq = p1.createSideQuest("SideTst", "Side Quest test", goals, rw);
         
         //player 2 cria uma party para completar a side quest
         Party pt = p2.createParty("PartyTst", "Party Test", sq);
-        this.partys.add(pt);
         
-
         //mandando os convites de grupo para player 1 e 3
         pt.invite(p1);
         pt.invite(p3);
-        
         
         //player 1 e 3 aceitam o convite para party 
         p1.acceptPartyInvite(pt);
         p3.acceptPartyInvite(pt);
         
-        
-        //player 1(criador) add player 2 como um sensor para a goal
-        if( ((ManualValidation) p1.getCreatedSQ().get(0).getGoals().get(0)) instanceof ManualValidation )
-            ((ManualValidation) p1.getCreatedSQ().get(0).getGoals().get(0)).addSensors(p2);
-        
-        
-        //player 3 faz uma requisiçao para completar a goal
-        p3.getQuestGoals().get(0).get(0).makeRequest(p3);
-        
-        //player 2 valida a requisiçao do player 3
-        Request rq = p2.getSensoringGoals().get(0).getRequests().get(0);
-        p2.getSensoringGoals().get(0).validate(rq);
     }
+    
+       
+    public void newPlayer(Player player){
+        this.players.add(player);
+    }
+    
+    public void newQuest(SideQuest sq){
+        this.sideQuests.add(sq);
+    }
+    
+    public void newParty(Party party){
+        this.partys.add(party);
+    }
+   
        
     public static void main(String[] args) {
      

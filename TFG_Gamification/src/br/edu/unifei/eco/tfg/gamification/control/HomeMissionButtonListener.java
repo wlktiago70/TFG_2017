@@ -33,7 +33,7 @@ public class HomeMissionButtonListener implements ActionListener{
             //Test Begin (Remove it when real data exists)
             List<String> list = new ArrayList<>();
             for(int i=0;i<5;i++)list.add("Mission "+(i+1));
-            descendantForm = new Mission((TemplateForm) parentForm,list,list,list,list);
+            descendantForm = new Mission((TemplateForm) parentForm,list,list,list,list,list);
             //Test End
         }
     }

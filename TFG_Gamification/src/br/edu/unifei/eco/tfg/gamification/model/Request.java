@@ -24,12 +24,29 @@ public class Request {
         return maker;
     }
 
-     public Quest getQuest() {
+    public void setMaker(Player maker) {
+        this.maker = maker;
+    }
+
+    public Quest getQuest() {
         return quest;
+    }
+
+    public void setQuest(Quest quest) {
+        this.quest = quest;
     }
 
     public Goal getGoal() {
         return goal;
     }
+
+    public void setGoal(Goal goal) {
+        this.goal = goal;
+    }
+
+    
+    
+    
+    
     
 }

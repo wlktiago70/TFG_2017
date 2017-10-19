@@ -27,10 +27,12 @@ public class ManualValidation extends Goal {
     
     @Override
     public void validate(Request rq){
-        if(getRequests().contains(rq)){
-            addFinishedPlayers(rq.getMaker());
-            removeRequests(rq);
-        }
+        rq.getMaker().getQuestGoals().get(
+                rq.getMaker().getQuestGoals().indexOf(
+                        rq.getQuest().getGoals())).get(
+                                rq.getQuest().getGoals().indexOf(rq.getGoal())).setFinished(true);
+        
+        removeRequests(rq);
         
     }    
 }

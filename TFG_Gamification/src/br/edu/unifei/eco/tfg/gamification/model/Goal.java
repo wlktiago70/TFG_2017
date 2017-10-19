@@ -18,14 +18,12 @@ public abstract class Goal {
     private boolean finished;           //indica se a meta foi cumprida
     private List<Request> requests = new ArrayList<Request>();  //Requisiçoes para validar a goal
     private final Quest quest;
-    private List<Player> finishedPlayers;
     
     
     public Goal(String description, Quest quest) {
         this.description = description;
         this.finished = false;
         this.quest = quest;
-        this.finishedPlayers = new ArrayList<>();
     }
        
 
@@ -56,14 +54,6 @@ public abstract class Goal {
     public Quest getQuest() {
         return quest;
     }
-
-    public List<Player> getFinishedPlayers() {
-        return finishedPlayers;
-    }
-    
-    public void addFinishedPlayers(Player player) {
-        this.finishedPlayers.add(player);
-    }
     
     
     //solicita a validaçao da Goal
@@ -76,10 +66,6 @@ public abstract class Goal {
     public void validate(Request rq){
         
     }
-
-    
-
-      
     
     
     

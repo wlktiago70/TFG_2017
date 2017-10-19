@@ -15,14 +15,12 @@ public class SideQuest extends Quest {
     
     private Player creator;             //criador da SQ
     private Party participatingPartys;  //partys que estao participando da SQ
-    private ClassificationEnum classification;   //classificaçao quanto ao tipo da SQ
 
     
-    public SideQuest(Player creator, String name, String description, List<Reward> rewards, ClassificationEnum classification) {
+    public SideQuest(Player creator, String name, String description, List<Reward> rewards) {
         
         super(name, description, rewards);
         this.creator = creator;
-        this.classification = classification;
         
     }
     
@@ -41,10 +39,6 @@ public class SideQuest extends Quest {
         return participatingPartys;
     }
 
-    public ClassificationEnum getClassification() {
-        return classification;
-    }
-        
     public void setParticipatingPartys(Party participatingPartys) {
         this.participatingPartys = participatingPartys;
     }

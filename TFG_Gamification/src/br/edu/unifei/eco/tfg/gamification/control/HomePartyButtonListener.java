@@ -10,8 +10,6 @@ import br.edu.unifei.eco.tfg.gamification.view.TemplateForm;
 import com.codename1.ui.Form;
 import com.codename1.ui.events.ActionEvent;
 import com.codename1.ui.events.ActionListener;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  *
@@ -31,9 +29,7 @@ public class HomePartyButtonListener implements ActionListener{
             descendantForm.showBack();
         }else{
             //Test Begin (Remove it when real data exists)
-            List<String> list = new ArrayList<>(); 
-            for(int i=0;i<5;i++)list.add("Member "+(i+1));
-            descendantForm = new Party((TemplateForm) parentForm,"A Party Name","The Owner",list,"A brief description about the party.");
+            descendantForm = new Party((TemplateForm) parentForm,"A Party Name","The Owner","A brief description about the party.");
             //Test End
         }
     }
