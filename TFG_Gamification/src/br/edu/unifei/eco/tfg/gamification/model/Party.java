@@ -30,6 +30,7 @@ public class Party extends Group {
         this.members.add(creator);
         this.requests = new ArrayList<>();
         this.invites = new ArrayList<>();
+        this.active = true;
     }
 
     public Player getCreator() {
@@ -113,6 +114,6 @@ public class Party extends Group {
         
     }
     
-    
+        
     
 }

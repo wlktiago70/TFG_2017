@@ -44,6 +44,7 @@ public class Player {
         this.questGoals = new ArrayList<>();
         this.rewardsOwned = new ArrayList<>();
         this.rewardsAvailable = new ArrayList<>();
+        this.performance = new PlayerPerformance();
         this.ocupation = ocupation;
     }
     
@@ -194,12 +195,14 @@ public class Player {
     
     public void enlist(Quest quest) {
         this.questsJoined.add(quest) ;
-        questGoals.add(quest.addUsersEnlisted(this)); 
+        this.questGoals.add(quest.addUsersEnlisted(this)); 
+        if(quest instanceof SideQuest)
+            this.performance.addTotalSQ();
     }
     
     public void unlist(Quest quest) {
         this.questsJoined.remove(quest) ;
-        questGoals.remove(quest.removeUsersEnlisted(this)); 
+        this.questGoals.remove(quest.removeUsersEnlisted(this)); 
     }
 
     public PlayerOcupationEnum getOcupation() {
@@ -239,7 +242,7 @@ public class Player {
         if(createdSQ.size() < privileges.getMaxSQCreated()){       
             newSQ = new SideQuest(this, name, description, rewards, classification);
             createdSQ.add(newSQ);
-            
+            performance.addTotalSQcreated();
             return newSQ;
         }
         else return null;    
@@ -268,27 +271,48 @@ public class Player {
         return false;
     }
     
+    //abandona a equipe
+    public void leaveParty(){
+        if (this.party != null && this.party.getCreator() != this){
+            this.party.leaveParty(this);
+            this.party = null;
+        }
+    }
+    
     //cria equipe
     public Party createParty(String name, String description, SideQuest sideQuest){
         Party newPrt;
-        
         newPrt = new Party(name, description, this, sideQuest);
-        party = newPrt;
         
-        return newPrt;
+        leaveParty();
+        
+        if(updateParty(newPrt)){
+            this.createdPaties.add(newPrt);
+            return newPrt;
+        }
+        
+        return null;
     }
     
     //jogador solicita ser adicionado na equipe
     public boolean requestParty(Party party){
-        if(this.party != null) 
-            this.party.leaveParty(this);
-        this.party = null;
+        leaveParty();
         
         if (party.addRequest(this))
             return true;
         else
             return false;
         
+    }
+    
+    //jogador aceita o convite para uma equipe
+    public boolean acceptPartyInvite(Party party){
+        leaveParty();
+        
+        if(party.getInvites().contains(this)){
+            return party.addMember(this);
+        }
+        return false;
     }
     
     //criador da equipe aceita a solicitaçao para entrar na equipe
@@ -303,19 +327,18 @@ public class Player {
        }
     }
     
-    //jogador aceita o convite para uma equipe
-    public boolean acceptPartyInvite(Party party){
-        if(party.getInvites().contains(this)){
-            return party.addMember(this);
-        }
-        return false;
-    }
-    
-    //abandona a equipe
-    public void leaveParty(){
-        if (this.party !=null)
-            this.party.leaveParty(this);
-        this.party = null;
+    //criador da equipe termina a equipe
+    public void finnishPary(){
+       if( this.party.getCreator().equals(this) ){
+           this.party.setActive(false);
+           
+           for (Player player : this.party.getMembers()) {
+               player.leaveParty();
+           }
+           
+           this.party = null;
+                      
+       }
     }
 
 }

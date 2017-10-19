@@ -94,12 +94,13 @@ public abstract class Quest {
         this.finishedPlayers.add(player);
     }
     
-    //verifica se as goals estao completas e altera o estado da quest
+    //verifica se as goals estao completas e altera o estado da quest para os players
     public boolean isCompleted(Player player) {
         for (Goal g : this.goals) {
             if (!g.getFinishedPlayers().contains(player)) return false;
         }
         this.finishedPlayers.add(player);
+        player.getPerformance().addCompletedSQ();
         giveReward(player);
         return true;
     }
