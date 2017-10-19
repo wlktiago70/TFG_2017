@@ -5,6 +5,7 @@
  */
 package br.edu.unifei.eco.tfg.gamification.view;
 
+import br.edu.unifei.eco.tfg.gamification.control.LoginSignUpButtonListener;
 import br.edu.unifei.eco.tfg.gamification.control.LoginStartButtonListener;
 import com.codename1.ui.Button;
 import com.codename1.ui.Component;
@@ -14,6 +15,7 @@ import com.codename1.ui.Label;
 import com.codename1.ui.Image;
 import com.codename1.ui.TextField;
 import com.codename1.ui.layouts.FlowLayout;
+import com.codename1.ui.table.TableLayout;
 import java.io.IOException;
 
 /**
@@ -21,7 +23,6 @@ import java.io.IOException;
  * @author User
  */
 public class Login extends Form{
-    private Container cnt = new Container();
     private final Label lblUser = new Label("User");
     private final Label lblPassword = new Label("Password");
     private final TextField txfUser = new TextField("","Your e-mail",30,TextField.EMAILADDR);
@@ -29,20 +30,22 @@ public class Login extends Form{
     private final Button btnStart = new Button("Let's start!");
     private final Button btnSignUp = new Button("Sign up");
     private final Label icon;
+    private TableLayout tabLyt = new TableLayout(6,2);
     private boolean login = false;
     public Login() throws IOException{
-        super("Welcome", new FlowLayout(Component.CENTER));
+        super("Welcome");
+        this.setLayout(tabLyt);
         btnStart.setUIID("GreenButton");
-        this.icon = new Label(Image.createImage("/img.png").scaled(150,150));        
-        this.add(icon);
-        cnt.add(lblUser);
-        cnt.add(txfUser);
-        cnt.add(lblPassword);
-        cnt.add(txfPassword);
-        this.add(cnt);
-        this.add(btnSignUp);
+        icon = new Label(Image.createImage("/img.png").scaled(150,150));
+        this.add(tabLyt.createConstraint().heightPercentage(35).verticalAlign(CENTER).horizontalAlign(CENTER).horizontalSpan(2),icon)
+            .add(tabLyt.createConstraint().horizontalSpan(2),lblUser)
+            .add(tabLyt.createConstraint().horizontalSpan(2),txfUser)
+            .add(tabLyt.createConstraint().horizontalSpan(2),lblPassword)
+            .add(tabLyt.createConstraint().horizontalSpan(2),txfPassword)
+            .add(tabLyt.createConstraint().widthPercentage(50).heightPercentage(15).verticalAlign(CENTER).horizontalAlign(CENTER),btnSignUp)
+            .add(tabLyt.createConstraint().widthPercentage(50).heightPercentage(15).verticalAlign(CENTER).horizontalAlign(CENTER),btnStart);
+        btnSignUp.addActionListener(new LoginSignUpButtonListener(this));
         btnStart.addActionListener(new LoginStartButtonListener(this,txfUser.getText(),txfPassword.getText()));
-        this.add(btnStart);
         this.show();
     }
     public Button getBtnStart(){

@@ -32,6 +32,16 @@ public class TemplateForm extends Form{
         }        
         configureToolbar();
     }
+    public TemplateForm(Form parent,String title){
+        super(title);
+        parentForm = parent;
+        try{
+            logoutForm = ((TemplateForm)parentForm).getLogoutForm();
+        }catch(Exception e){
+            logoutForm = parentForm;
+        }        
+        configureToolbar();
+    }
     
     public Form getParentForm() {
         return parentForm;

@@ -33,21 +33,23 @@ public class MissionCreate extends TemplateForm{
     public static final int INSTRUCTIONAL = 2;
     public static final int ATHLETICS = 3;
     public static final int CULTURAL = 4;
+    public static final int OTHERS = 5;
     private Container cntNorth;            
-    private Container cntNorthTypes = new Container(new GridLayout(1,4));            
+    private Container cntNorthTypes = new Container(new GridLayout(1,5));            
     private Container cntCenter = new Container(new FlowLayout(Component.CENTER));
     private TextField txfMissionTitle = new TextField();
     private Label lblVol = new Label(FontImage.createMaterial(FontImage.MATERIAL_MOOD, UIManager.getInstance().getComponentStyle("TitleCommand")));
     private Label lblIns = new Label(FontImage.createMaterial(FontImage.MATERIAL_SCHOOL, UIManager.getInstance().getComponentStyle("TitleCommand")));
     private Label lblAth = new Label(FontImage.createMaterial(FontImage.MATERIAL_FAVORITE, UIManager.getInstance().getComponentStyle("TitleCommand")));
     private Label lblCul = new Label(FontImage.createMaterial(FontImage.MATERIAL_PALETTE, UIManager.getInstance().getComponentStyle("TitleCommand")));
+    private Label lblOth = new Label(FontImage.createMaterial(FontImage.MATERIAL_LIBRARY_ADD, UIManager.getInstance().getComponentStyle("TitleCommand")));
     private int typeSel = 0;
     private TextField txfDueDate = new TextField("","DD / MM / YYYY",10,TextField.ANY);
     private TextArea txaDescription = new TextArea(30,30);
     private Button btnCreate = new Button("Create");
     public MissionCreate(TemplateForm parent){
         super(parent,"Mission",new BorderLayout());
-        cntNorthTypes.add(lblVol).add(lblIns).add(lblAth).add(lblCul);
+        cntNorthTypes.add(lblVol).add(lblIns).add(lblAth).add(lblCul).add(lblOth);
         cntNorth = TableLayout.encloseIn(2, new Label("Title: "),txfMissionTitle,
                                             new Label("Type: "),cntNorthTypes,
                                             new Label("Due date: "),txfDueDate,
@@ -60,6 +62,7 @@ public class MissionCreate extends TemplateForm{
                 lblIns.setIcon(FontImage.createMaterial(FontImage.MATERIAL_SCHOOL, UIManager.getInstance().getComponentStyle("TitleCommand")));
                 lblAth.setIcon(FontImage.createMaterial(FontImage.MATERIAL_FAVORITE, UIManager.getInstance().getComponentStyle("TitleCommand")));
                 lblCul.setIcon(FontImage.createMaterial(FontImage.MATERIAL_PALETTE, UIManager.getInstance().getComponentStyle("TitleCommand")));
+                lblOth.setIcon(FontImage.createMaterial(FontImage.MATERIAL_LIBRARY_ADD, UIManager.getInstance().getComponentStyle("TitleCommand")));
                 typeSel = MissionCreate.VOLUNTEERING;
                 Log.p("Type selected = "+typeSel);
             }
@@ -71,6 +74,7 @@ public class MissionCreate extends TemplateForm{
                 lblIns.setIcon(FontImage.createMaterial(FontImage.MATERIAL_SCHOOL, UIManager.getInstance().getComponentStyle("Label")));
                 lblAth.setIcon(FontImage.createMaterial(FontImage.MATERIAL_FAVORITE, UIManager.getInstance().getComponentStyle("TitleCommand")));
                 lblCul.setIcon(FontImage.createMaterial(FontImage.MATERIAL_PALETTE, UIManager.getInstance().getComponentStyle("TitleCommand")));
+                lblOth.setIcon(FontImage.createMaterial(FontImage.MATERIAL_LIBRARY_ADD, UIManager.getInstance().getComponentStyle("TitleCommand")));
                 typeSel = MissionCreate.INSTRUCTIONAL;
                 Log.p("Type selected = "+typeSel);
             }
@@ -82,6 +86,7 @@ public class MissionCreate extends TemplateForm{
                 lblIns.setIcon(FontImage.createMaterial(FontImage.MATERIAL_SCHOOL, UIManager.getInstance().getComponentStyle("TitleCommand")));
                 lblAth.setIcon(FontImage.createMaterial(FontImage.MATERIAL_FAVORITE, UIManager.getInstance().getComponentStyle("Label")));
                 lblCul.setIcon(FontImage.createMaterial(FontImage.MATERIAL_PALETTE, UIManager.getInstance().getComponentStyle("TitleCommand")));
+                lblOth.setIcon(FontImage.createMaterial(FontImage.MATERIAL_LIBRARY_ADD, UIManager.getInstance().getComponentStyle("TitleCommand")));
                 typeSel = MissionCreate.ATHLETICS;
                 Log.p("Type selected = "+typeSel);
             }
@@ -93,7 +98,20 @@ public class MissionCreate extends TemplateForm{
                 lblIns.setIcon(FontImage.createMaterial(FontImage.MATERIAL_SCHOOL, UIManager.getInstance().getComponentStyle("TitleCommand")));
                 lblAth.setIcon(FontImage.createMaterial(FontImage.MATERIAL_FAVORITE, UIManager.getInstance().getComponentStyle("TitleCommand")));
                 lblCul.setIcon(FontImage.createMaterial(FontImage.MATERIAL_PALETTE, UIManager.getInstance().getComponentStyle("Label")));
+                lblOth.setIcon(FontImage.createMaterial(FontImage.MATERIAL_LIBRARY_ADD, UIManager.getInstance().getComponentStyle("TitleCommand")));
                 typeSel = MissionCreate.CULTURAL;
+                Log.p("Type selected = "+typeSel);
+            }
+        });
+        lblOth.addPointerPressedListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                lblVol.setIcon(FontImage.createMaterial(FontImage.MATERIAL_MOOD, UIManager.getInstance().getComponentStyle("TitleCommand")));
+                lblIns.setIcon(FontImage.createMaterial(FontImage.MATERIAL_SCHOOL, UIManager.getInstance().getComponentStyle("TitleCommand")));
+                lblAth.setIcon(FontImage.createMaterial(FontImage.MATERIAL_FAVORITE, UIManager.getInstance().getComponentStyle("TitleCommand")));
+                lblCul.setIcon(FontImage.createMaterial(FontImage.MATERIAL_PALETTE, UIManager.getInstance().getComponentStyle("TitleCommand")));
+                lblOth.setIcon(FontImage.createMaterial(FontImage.MATERIAL_LIBRARY_ADD, UIManager.getInstance().getComponentStyle("Label")));
+                typeSel = MissionCreate.OTHERS;
                 Log.p("Type selected = "+typeSel);
             }
         });
@@ -103,14 +121,15 @@ public class MissionCreate extends TemplateForm{
                 String str = txfDueDate.getText();
                 Date date;
                 if(type == DataChangedListener.ADDED || type == DataChangedListener.CHANGED){
-                    if(str.length()>=8){
-                        try{
+                    try{
+                        if(str.length()>=1)
                             Integer.parseInt(str);
+                        if(str.length()>=8){
                             str = str.substring(0,2)+"/"+str.substring(2,4)+"/"+str.substring(4);
                             date = new SimpleDateFormat("dd/MM/yyyy").parse(str);
-                        }catch(Exception e){
-                            txfDueDate.clear();
                         }
+                    }catch(Exception e){
+                        txfDueDate.clear(); 
                     }
                 }
             }
