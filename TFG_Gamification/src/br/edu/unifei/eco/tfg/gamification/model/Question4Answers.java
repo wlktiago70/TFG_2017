@@ -16,7 +16,8 @@ public class Question4Answers extends Question {
     private List<String> answers;
     private List<int[]> points;
     
-    public Question4Answers(String answerA, int[] pointsA, String answerB, int[] pointsB, String answerC, int[] pointsC, String answerD, int[] pointsD) {
+    public Question4Answers(String text, String answerA, int[] pointsA, String answerB, int[] pointsB, String answerC, int[] pointsC, String answerD, int[] pointsD) {
+        super(text);
         this.answers = new ArrayList<>();
         this.points = new ArrayList<>();
         

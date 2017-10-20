@@ -12,10 +12,19 @@ import java.util.List;
  * @author Paulo
  */
 public abstract class Question {
+    private String text;
     private int scores[];
     private boolean answered;
     private List<String> answers;
 
+    public Question(String text){
+        this.text = text;
+    }
+
+    public String getText() {
+        return text;
+    }
+    
     public int[] getScores() {
         return scores;
     }
