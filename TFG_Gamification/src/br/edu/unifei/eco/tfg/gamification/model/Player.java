@@ -36,9 +36,8 @@ public class Player {
     private List<AchievementEnum> achievements = new ArrayList<AchievementEnum>();  //conquistas que o jogador obteve
     
 
-    public Player(String name, Clan clan, PlayerOcupationEnum ocupation) {
+    public Player(String name, PlayerOcupationEnum ocupation) {
         this.name = name;
-        this.clan = clan;
         this.privileges = privileges.beginer;
         this.sensoringGoals = new ArrayList<>();
         this.questGoals = new ArrayList<>();

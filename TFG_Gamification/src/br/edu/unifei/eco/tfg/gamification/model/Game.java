@@ -18,6 +18,7 @@ public class Game {
     private List<SideQuest> sideQuests;
     private List<Clan> clans;
     private List<Party> partys;
+    private List<Question> assignmentQuestions;
 
     public Game() {
         this.players = new ArrayList<Player>();
@@ -25,6 +26,7 @@ public class Game {
         this.sideQuests = new ArrayList<SideQuest>();
         this.clans = new ArrayList<Clan>();
         this.partys = new ArrayList<Party>();
+        this.assignmentQuestions = new ArrayList<>();
         
         //inicia as  main quests
         List<Reward> rw = new ArrayList<Reward>();
@@ -61,15 +63,30 @@ public class Game {
         //cria 2 jogadores
         Player p1, p2, p3;
                 
-        p1 = new Player("player1",clans.get(0), PlayerOcupationEnum.eComputacao);
+        p1 = new Player("player1", PlayerOcupationEnum.eComputacao);
         this.players.add(p1);
-        
-        p2 = new Player("player2",clans.get(1), PlayerOcupationEnum.eControleAutomacao);
+                
+        p2 = new Player("player2", PlayerOcupationEnum.eControleAutomacao);
         this.players.add(p2);
         
-        p3 = new Player("player3",clans.get(1), PlayerOcupationEnum.eEletronica);
+        p3 = new Player("player3", PlayerOcupationEnum.eEletronica);
         this.players.add(p3);
         
+        /* falta add as quests
+        //designa o clans para os players
+        ClanAssignment caP1, caP2, caP3;
+        caP1 = new ClanAssignment(clans, p1, assignmentQuestions);
+        
+        //procedimento para  ruegistrar um player em um clan
+        List<Question> questions = caP1.getQuestions();
+        for (Question question : questions) {
+            question.answer(answer);
+        }
+        caP1.assignPlayer();
+        
+        caP2 = new ClanAssignment(clans, p2, assignmentQuestions);
+        caP3 = new ClanAssignment(clans, p3, assignmentQuestions);
+        */
 
         //player 1 cria uma sidequest (com a msm reward da mainquest para fins de simplificaçao)
         p1.setPrivileges(PrivilegeEnum.experienced);
