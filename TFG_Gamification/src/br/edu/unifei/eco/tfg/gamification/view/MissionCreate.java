@@ -48,7 +48,7 @@ public class MissionCreate extends TemplateForm{
     private TextArea txaDescription = new TextArea(30,30);
     private Button btnCreate = new Button("Create");
     public MissionCreate(TemplateForm parent){
-        super(parent,"Mission",new BorderLayout());
+        super(parent,parent.getHomeForm(),"Mission",new BorderLayout());
         cntNorthTypes.add(lblVol).add(lblIns).add(lblAth).add(lblCul).add(lblOth);
         cntNorth = TableLayout.encloseIn(2, new Label("Title: "),txfMissionTitle,
                                             new Label("Type: "),cntNorthTypes,

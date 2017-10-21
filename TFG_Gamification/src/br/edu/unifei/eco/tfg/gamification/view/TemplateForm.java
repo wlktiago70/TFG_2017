@@ -18,29 +18,36 @@ import com.codename1.ui.plaf.UIManager;
  *
  * @author wkuan
  */
-public class TemplateForm extends Form{
+public abstract class TemplateForm extends Form{
     protected Form parentForm = null;
     protected Form logoutForm = null;
+    protected Form homeForm = null;
     
-    public TemplateForm(Form parent,String title,Layout layout){
+    public TemplateForm(Form parent,Form home,String title,Layout layout){
         super(title,layout);
         parentForm = parent;
         try{
             logoutForm = ((TemplateForm)parentForm).getLogoutForm();
         }catch(Exception e){
             logoutForm = parentForm;
-        }        
+        }
+        homeForm = home;
         configureToolbar();
     }
-    public TemplateForm(Form parent,String title){
+    public TemplateForm(Form parent,Form home,String title){
         super(title);
         parentForm = parent;
         try{
             logoutForm = ((TemplateForm)parentForm).getLogoutForm();
         }catch(Exception e){
             logoutForm = parentForm;
-        }        
+        }
+        homeForm = home;
         configureToolbar();
+    }
+    
+    public Form getHomeForm() {
+        return homeForm;
     }
     
     public Form getParentForm() {
@@ -51,10 +58,23 @@ public class TemplateForm extends Form{
         return logoutForm;
     }
     
+    public void setHomeForm(Form form) {
+        homeForm = form;
+    }
+    
+    public void setParentForm(Form form) {
+        parentForm = form;
+    }
+
+    public void setLogoutForm(Form form) {
+        logoutForm = form;
+    }
+    
     private void configureToolbar(){
         Toolbar.setGlobalToolbar(true);
         Style s = UIManager.getInstance().getComponentStyle("TitleCommand");
         this.getToolbar().addCommandToLeftBar("", FontImage.createMaterial(FontImage.MATERIAL_KEYBOARD_ARROW_LEFT, s), (e) -> parentForm.showBack());
+        this.getToolbar().addCommandToSideMenu("Home", null, (e) -> homeForm.showBack());
         this.getToolbar().addCommandToSideMenu("Logout", null, (e) -> logoutForm.showBack());
         this.getToolbar().addSearchCommand(new SearchButtonListener(this), 3);
         this.getToolbar().addCommandToRightBar("", FontImage.createMaterial(FontImage.MATERIAL_MORE_VERT, s), (e) -> Log.p("Clicked"));

@@ -45,8 +45,8 @@ public class Home extends TemplateForm{
     private static Button btnParty = new Button("Party");
     private static Image[] imgHouses = new Image[4];
     private TableLayout tabLyt = new TableLayout(5,3);
-    public Home(Form parent, String name, int score, Image photo, List<Image> achievements){
-        super(parent,"Home");
+    public Home(Form parent, Form home, String name, int score, Image photo, List<Image> achievements){
+        super(parent,home,"Home");
         this.setLayout(tabLyt);
         userName = name;
         userScore = score;

@@ -44,7 +44,7 @@ public class Mission extends TemplateForm{
     private BoxLayout boxlyt = new BoxLayout(BoxLayout.Y_AXIS);
     private Button btnCreateMission = new Button("Create mission");
     public Mission(TemplateForm parent, List<String> lstVol, List<String> lstIns, List<String> lstAth, List<String> lstCul, List<String> lstOth){
-        super(parent,"Missions", new BorderLayout());
+        super(parent,parent.getHomeForm(),"Missions", new BorderLayout());
         cntVolunteering = new Container(new BoxLayout(BoxLayout.Y_AXIS));
         cntInstructional = new Container(new BoxLayout(BoxLayout.Y_AXIS));
         cntAthletics = new Container(new BoxLayout(BoxLayout.Y_AXIS));

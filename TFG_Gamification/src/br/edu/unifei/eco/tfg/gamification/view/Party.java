@@ -30,7 +30,7 @@ public class Party extends TemplateForm{
     private Button btnMembers = new Button("Party members");
     private TableLayout tblLyt = new TableLayout(4,1);
     public Party(TemplateForm parent, String strPartyName, String strOwner, String strDescription){
-        super(parent,"Parties", new BorderLayout());
+        super(parent,parent.getHomeForm(),"Parties", new BorderLayout());
         addComponentToContainer(strPartyName,strOwner,strDescription);                
         for (Container cntParty : cntParties) partyList.addContent(new Label(strPartyName),cntParty);        
         partyList.expand(cntParties.get(0));//Expand first

@@ -5,24 +5,16 @@
  */
 package br.edu.unifei.eco.tfg.gamification.view;
 
-import com.codename1.io.Log;
 import com.codename1.ui.Button;
 import com.codename1.ui.Component;
 import com.codename1.ui.Container;
-import com.codename1.ui.FontImage;
 import com.codename1.ui.Label;
 import com.codename1.ui.TextArea;
 import com.codename1.ui.TextField;
-import com.codename1.ui.events.ActionEvent;
-import com.codename1.ui.events.ActionListener;
-import com.codename1.ui.events.DataChangedListener;
 import com.codename1.ui.layouts.BorderLayout;
 import com.codename1.ui.layouts.FlowLayout;
 import com.codename1.ui.layouts.GridLayout;
-import com.codename1.ui.plaf.UIManager;
 import com.codename1.ui.table.TableLayout;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 /**
  *
@@ -40,7 +32,7 @@ public class PartyCreate extends TemplateForm{
     private Button btnInvitePlayer = new Button("Invite players");    
     private TableLayout tblLyt = new TableLayout(4,1);
     public PartyCreate(TemplateForm parent){
-        super(parent,"Party",new BorderLayout());
+        super(parent,parent.getHomeForm(),"Party",new BorderLayout());
         cntNorth = TableLayout.encloseIn(2, new Label("Title: "),txfPartyTitle,
                                             new Label("Description: "),new Label(""));
         cntCenter.setLayout(tblLyt);

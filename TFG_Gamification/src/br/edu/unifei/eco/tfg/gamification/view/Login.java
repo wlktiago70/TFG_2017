@@ -8,13 +8,10 @@ package br.edu.unifei.eco.tfg.gamification.view;
 import br.edu.unifei.eco.tfg.gamification.control.LoginSignUpButtonListener;
 import br.edu.unifei.eco.tfg.gamification.control.LoginStartButtonListener;
 import com.codename1.ui.Button;
-import com.codename1.ui.Component;
-import com.codename1.ui.Container;
 import com.codename1.ui.Form;
 import com.codename1.ui.Label;
 import com.codename1.ui.Image;
 import com.codename1.ui.TextField;
-import com.codename1.ui.layouts.FlowLayout;
 import com.codename1.ui.table.TableLayout;
 import java.io.IOException;
 

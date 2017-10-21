@@ -28,7 +28,7 @@ public class LoginCreate extends TemplateForm{
     private Button btnCreate = new Button("Create");   
     private TableLayout tblLyt = new TableLayout(3,1);
     public LoginCreate(Form parent){
-        super(parent,"SignUp",new BorderLayout());
+        super(parent,parent,"SignUp",new BorderLayout());
         cntContent = new Container(tblLyt);
         cntContent.add(TableLayout.encloseIn(2, new Label("Name: "),txfUserName,
                                                 new Label("E-mail: "),txfUserMail,
