@@ -15,6 +15,7 @@ import com.codename1.ui.Form;
 import com.codename1.ui.Graphics;
 import com.codename1.ui.Image;
 import com.codename1.ui.Label;
+import com.codename1.ui.events.ActionListener;
 import com.codename1.ui.layouts.BorderLayout;
 import com.codename1.ui.layouts.GridLayout;
 import com.codename1.ui.plaf.UIManager;
@@ -45,6 +46,7 @@ public class Home extends TemplateForm{
     private static Button btnParty = new Button("Party");
     private static Image[] imgHouses = new Image[4];
     private TableLayout tabLyt = new TableLayout(5,3);
+    private ActionListener actLisUser;
     public Home(Form parent, Form home, String name, int score, Image photo, List<Image> achievements){
         super(parent,home,"Home");
         this.setLayout(tabLyt);
@@ -55,22 +57,20 @@ public class Home extends TemplateForm{
         processImages();
         lblUserName = new Label(userName);
         lblUserScore = new Label("Total Score: "+Integer.toString(userScore));
-        lblUserPhoto = new Label(userPhoto);  
-        lblUserName.addPointerPressedListener(new HomeUserComponentListener(this));
-        lblUserScore.addPointerPressedListener(new HomeUserComponentListener(this));
-        lblUserPhoto.addPointerPressedListener(new HomeUserComponentListener(this));
+        lblUserPhoto = new Label(userPhoto);
+        actLisUser = new HomeAchievementComponentListener(this);
+        lblUserName.addPointerPressedListener(actLisUser);
+        lblUserScore.addPointerPressedListener(actLisUser);
+        lblUserPhoto.addPointerPressedListener(actLisUser);
+//        lblUserName.addPointerPressedListener(new HomeUserComponentListener(this));
+//        lblUserScore.addPointerPressedListener(new HomeUserComponentListener(this));
+//        lblUserPhoto.addPointerPressedListener(new HomeUserComponentListener(this));
         lblUserName.getUnselectedStyle().setFont(Font.createSystemFont(Font.FACE_SYSTEM, Font.STYLE_BOLD, Font.SIZE_LARGE));
         lblUserScore.getUnselectedStyle().setFont(Font.createSystemFont(Font.FACE_SYSTEM, Font.STYLE_ITALIC, Font.SIZE_LARGE));        
         btnMission.setIcon(FontImage.createMaterial(FontImage.MATERIAL_CENTER_FOCUS_STRONG, UIManager.getInstance().getComponentStyle("Button")));
         btnParty.setIcon(FontImage.createMaterial(FontImage.MATERIAL_GROUP, UIManager.getInstance().getComponentStyle("Button")));
         btnMission.addActionListener(new HomeMissionButtonListener(this));
         btnParty.addActionListener(new HomePartyButtonListener(this));
-//        for (Image achievement : mainAchievements){
-//            Label lblAux = new Label(achievement);
-//            lblAux.getStyle().setAlignment(Component.CENTER);
-//            lblAux.addPointerPressedListener(new HomeAchievementComponentListener(this));
-//            cntAchiev.add(lblAux);
-//        }
         for (Image imgHouse : imgHouses){
             Label lblAux = new Label(imgHouse);
             lblAux.getStyle().setAlignment(Component.CENTER);
@@ -81,10 +81,12 @@ public class Home extends TemplateForm{
         this.add(tabLyt.createConstraint().horizontalAlign(CENTER).verticalAlign(CENTER).widthPercentage(33).heightPercentage(20).verticalSpan(2),lblUserPhoto)
             .add(tabLyt.createConstraint().horizontalAlign(CENTER).verticalAlign(BOTTOM).widthPercentage(66).heightPercentage(10).horizontalSpan(2),lblUserName)
             .add(tabLyt.createConstraint().horizontalAlign(CENTER).verticalAlign(TOP).widthPercentage(66).heightPercentage(10).horizontalSpan(2),lblUserScore);
+        mainAchievements.set(1, mainAchievements.get(1).scaledWidth(190));
         for (Image achievement : mainAchievements){
             Label lblAux = new Label(achievement);
             lblAux.getStyle().setAlignment(Component.CENTER);
-            lblAux.addPointerPressedListener(new HomeAchievementComponentListener(this));
+            lblAux.addPointerPressedListener(actLisUser);
+//            lblAux.addPointerPressedListener(new HomeAchievementComponentListener(this));
             this.add(tabLyt.createConstraint().widthPercentage(33).heightPercentage(15).horizontalSpan(1),lblAux);
         }
         this.add(tabLyt.createConstraint().horizontalSpan(3).heightPercentage(7),btnMission)
@@ -94,7 +96,7 @@ public class Home extends TemplateForm{
     }
     private void processImages(){
         //User profile image
-        int width = 200;
+        int width = 250;
         userPhoto = userPhoto.scaledWidth(width);
         Image roundMask = Image.createImage(width, userPhoto.getHeight(), 0xff000000);
         Graphics gr = roundMask.getGraphics();
@@ -103,7 +105,7 @@ public class Home extends TemplateForm{
         Object mask = roundMask.createMask();
         userPhoto = userPhoto.applyMask(mask);
         //Houses images
-        width = 120;
+        width = 150;
         try {
             Image houses = Image.createImage("/4houses.jpg").scaled(2*width,2*width);
             Image roundSquareMask = Image.createImage("/#sqrMask.png").scaled(width,width);
@@ -118,7 +120,32 @@ public class Home extends TemplateForm{
             imgHouses[3] = imgHouses[3].applyMask(mask);
         } catch (IOException ex) {
             System.out.println("Error when processing images: An IOException occurred.");
-        }
-
+        }      
+        
     }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public int getUserScore() {
+        return userScore;
+    }
+
+    public void setUserScore(int userScore) {
+        this.userScore = userScore;
+    }
+
+    public Image getUserPhoto() {
+        return userPhoto;
+    }
+
+    public void setUserPhoto(Image userPhoto) {
+        this.userPhoto = userPhoto;
+    }
+   
 }

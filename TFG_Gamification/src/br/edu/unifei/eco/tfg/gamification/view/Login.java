@@ -33,7 +33,7 @@ public class Login extends Form{
         super("Welcome");
         this.setLayout(tabLyt);
         btnStart.setUIID("GreenButton");
-        icon = new Label(Image.createImage("/img.png").scaled(150,150));
+        icon = new Label(Image.createImage("/YourLogoHere.jpg").scaled(550,350));
         this.add(tabLyt.createConstraint().heightPercentage(35).verticalAlign(CENTER).horizontalAlign(CENTER).horizontalSpan(2),icon)
             .add(tabLyt.createConstraint().horizontalSpan(2),lblUser)
             .add(tabLyt.createConstraint().horizontalSpan(2),txfUser)

@@ -67,14 +67,24 @@ public class BudgetDoughnutChart extends AbstractDemoChart {
     int[] colors = new int[] { ColorUtil.BLUE, ColorUtil.GREEN, ColorUtil.MAGENTA, ColorUtil.YELLOW, ColorUtil.CYAN };
 
     DefaultRenderer renderer = buildCategoryRenderer(colors);
-    renderer.setApplyBackgroundColor(true);
+    renderer.setApplyBackgroundColor(false);
     renderer.setBackgroundColor(ColorUtil.rgb(222, 222, 200));
     renderer.setLabelsColor(ColorUtil.GRAY);
     
     DoughnutChart chart = new DoughnutChart(buildMultipleCategoryDataset("Project budget", titles, values), renderer);
     ChartComponent c = new ChartComponent(chart);
-    return wrap("Doughnut Chart Demo", c);
+    return wrap("Doughnut Chart Demo", c);    
+  }
+  public ChartComponent getChart(List<double[]> values,List<String[]> titles,int[] colors) {
     
+
+    DefaultRenderer renderer = buildCategoryRenderer(colors);
+    renderer.setApplyBackgroundColor(false);
+    renderer.setBackgroundColor(ColorUtil.rgb(32, 32, 37));
+    renderer.setLabelsColor(ColorUtil.WHITE);
+    
+    DoughnutChart chart = new DoughnutChart(buildMultipleCategoryDataset("Project budget", titles, values), renderer);
+    return new ChartComponent(chart);  
   }
 
 }

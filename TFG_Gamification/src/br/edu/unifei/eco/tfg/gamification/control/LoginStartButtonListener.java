@@ -49,7 +49,7 @@ public class LoginStartButtonListener implements ActionListener{
                     list.add(houses.subImage(0, 0, width, width, false).applyMask(mask));
                     list.add(houses.subImage(houses.getWidth()/2, 0, width, width, false).applyMask(mask));
                     list.add(houses.subImage(0, houses.getHeight()/2, width, width, false).applyMask(mask));
-                    descendantForm = new Home(parentForm,null,"Jon Snow",100,Image.createImage("/jonsnow.jpg"),list);
+                    descendantForm = new Home(parentForm,null,"Jon Snow da Silva",100,Image.createImage("/jonsnow.jpg"),list);
                     ((TemplateForm)descendantForm).setHomeForm(descendantForm);
                 } catch (IOException ex) {
                 }
