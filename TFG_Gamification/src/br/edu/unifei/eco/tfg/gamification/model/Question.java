@@ -11,42 +11,18 @@ import java.util.List;
  *
  * @author Paulo
  */
-public abstract class Question {
-    private String text;
-    private int scores[];
-    private boolean answered;
-    private List<String> answers;
-
-    public Question(String text){
-        this.text = text;
-    }
-
-    public String getText() {
-        return text;
-    }
+public interface Question {
     
-    public int[] getScores() {
-        return scores;
-    }
-
-    public void setScores(int[] scores) {
-        this.scores = scores;
-    }
-
-    public boolean isAnswered() {
-        return answered;
-    }
-
-    public void setAnswered(boolean answered) {
-        this.answered = answered;
-    }
     
-
-    public List<String> getAnswers() {
-        return answers;
-    }
-
+    public String getText();
     
-    public void answer(String answer){}
+    public int[] getScores();
+
+
+    public boolean isAnswered();
+
+    public List<String> getAnswers();
+    
+    public void answer(String answer);
     
 }
