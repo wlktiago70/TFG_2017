@@ -40,15 +40,18 @@ public class LoginStartButtonListener implements ActionListener{
                 try {
                     //for(int i=0;i<3;i++)list.add(Image.createImage("/img.png").scaled(75,75));
                     int width = 150;
-                    Image houses = Image.createImage("/4houses.jpg").scaled(2*width,2*width);
-                    Image roundMask = Image.createImage(width, width, 0xff000000);
-                    Graphics gr = roundMask.getGraphics();
-                    gr.setColor(0xffffff);
-                    gr.fillArc(0, 0, width, width, 0, 360);
-                    Object mask = roundMask.createMask();
-                    list.add(houses.subImage(0, 0, width, width, false).applyMask(mask));
-                    list.add(houses.subImage(houses.getWidth()/2, 0, width, width, false).applyMask(mask));
-                    list.add(houses.subImage(0, houses.getHeight()/2, width, width, false).applyMask(mask));
+//                    Image houses = Image.createImage("/4houses.jpg").scaled(2*width,2*width);
+//                    Image roundMask = Image.createImage(width, width, 0xff000000);
+//                    Graphics gr = roundMask.getGraphics();
+//                    gr.setColor(0xffffff);
+//                    gr.fillArc(0, 0, width, width, 0, 360);
+//                    Object mask = roundMask.createMask();
+//                    list.add(houses.subImage(0, 0, width, width, false).applyMask(mask));
+//                    list.add(houses.subImage(houses.getWidth()/2, 0, width, width, false).applyMask(mask));
+//                    list.add(houses.subImage(0, houses.getHeight()/2, width, width, false).applyMask(mask));
+                    list.add(Image.createImage("/Cultural Silver.png"));
+                    list.add(Image.createImage("/Lvl up 50.png"));
+                    list.add(Image.createImage("/Instructional Bronze.png"));
                     descendantForm = new Home(parentForm,null,"Jon Snow da Silva",100,Image.createImage("/jonsnow.jpg"),list);
                     ((TemplateForm)descendantForm).setHomeForm(descendantForm);
                 } catch (IOException ex) {

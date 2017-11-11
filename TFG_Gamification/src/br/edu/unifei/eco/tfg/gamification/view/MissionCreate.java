@@ -38,6 +38,7 @@ public class MissionCreate extends TemplateForm{
     private Container cntNorthTypes = new Container(new GridLayout(1,5));            
     private Container cntCenter = new Container(new FlowLayout(Component.CENTER));
     private TextField txfMissionTitle = new TextField();
+    private TextField txfMissionType = new TextField();
     private Label lblVol = new Label(FontImage.createMaterial(FontImage.MATERIAL_MOOD, UIManager.getInstance().getComponentStyle("TitleCommand")));
     private Label lblIns = new Label(FontImage.createMaterial(FontImage.MATERIAL_SCHOOL, UIManager.getInstance().getComponentStyle("TitleCommand")));
     private Label lblAth = new Label(FontImage.createMaterial(FontImage.MATERIAL_FAVORITE, UIManager.getInstance().getComponentStyle("TitleCommand")));
@@ -49,9 +50,11 @@ public class MissionCreate extends TemplateForm{
     private Button btnCreate = new Button("Create");
     public MissionCreate(TemplateForm parent){
         super(parent,parent.getHomeForm(),"Mission",new BorderLayout());
+        txfMissionType.setEditable(false);
         cntNorthTypes.add(lblVol).add(lblIns).add(lblAth).add(lblCul).add(lblOth);
         cntNorth = TableLayout.encloseIn(2, new Label("Title: "),txfMissionTitle,
                                             new Label("Type: "),cntNorthTypes,
+                                            new Label(""),txfMissionType,
                                             new Label("Due date: "),txfDueDate,
                                             new Label("Description: "),new Label(""));
         cntCenter.add(txaDescription);
@@ -64,6 +67,7 @@ public class MissionCreate extends TemplateForm{
                 lblCul.setIcon(FontImage.createMaterial(FontImage.MATERIAL_PALETTE, UIManager.getInstance().getComponentStyle("TitleCommand")));
                 lblOth.setIcon(FontImage.createMaterial(FontImage.MATERIAL_LIBRARY_ADD, UIManager.getInstance().getComponentStyle("TitleCommand")));
                 typeSel = MissionCreate.VOLUNTEERING;
+                changeMissionType();
                 Log.p("Type selected = "+typeSel);
             }
         });
@@ -76,6 +80,7 @@ public class MissionCreate extends TemplateForm{
                 lblCul.setIcon(FontImage.createMaterial(FontImage.MATERIAL_PALETTE, UIManager.getInstance().getComponentStyle("TitleCommand")));
                 lblOth.setIcon(FontImage.createMaterial(FontImage.MATERIAL_LIBRARY_ADD, UIManager.getInstance().getComponentStyle("TitleCommand")));
                 typeSel = MissionCreate.INSTRUCTIONAL;
+                changeMissionType();
                 Log.p("Type selected = "+typeSel);
             }
         });
@@ -88,6 +93,7 @@ public class MissionCreate extends TemplateForm{
                 lblCul.setIcon(FontImage.createMaterial(FontImage.MATERIAL_PALETTE, UIManager.getInstance().getComponentStyle("TitleCommand")));
                 lblOth.setIcon(FontImage.createMaterial(FontImage.MATERIAL_LIBRARY_ADD, UIManager.getInstance().getComponentStyle("TitleCommand")));
                 typeSel = MissionCreate.ATHLETICS;
+                changeMissionType();
                 Log.p("Type selected = "+typeSel);
             }
         });
@@ -100,6 +106,7 @@ public class MissionCreate extends TemplateForm{
                 lblCul.setIcon(FontImage.createMaterial(FontImage.MATERIAL_PALETTE, UIManager.getInstance().getComponentStyle("Label")));
                 lblOth.setIcon(FontImage.createMaterial(FontImage.MATERIAL_LIBRARY_ADD, UIManager.getInstance().getComponentStyle("TitleCommand")));
                 typeSel = MissionCreate.CULTURAL;
+                changeMissionType();
                 Log.p("Type selected = "+typeSel);
             }
         });
@@ -112,6 +119,7 @@ public class MissionCreate extends TemplateForm{
                 lblCul.setIcon(FontImage.createMaterial(FontImage.MATERIAL_PALETTE, UIManager.getInstance().getComponentStyle("TitleCommand")));
                 lblOth.setIcon(FontImage.createMaterial(FontImage.MATERIAL_LIBRARY_ADD, UIManager.getInstance().getComponentStyle("Label")));
                 typeSel = MissionCreate.OTHERS;
+                changeMissionType();
                 Log.p("Type selected = "+typeSel);
             }
         });
@@ -136,6 +144,35 @@ public class MissionCreate extends TemplateForm{
         });
         this.add(BorderLayout.NORTH,cntNorth).add(BorderLayout.CENTER,cntCenter).add(BorderLayout.SOUTH,btnCreate);
         this.show();
+    }
+    
+    
+    private void changeMissionType(){
+        switch(typeSel){
+            case MissionCreate.VOLUNTEERING:
+                txfMissionType.setText("Volunteering");
+                txfMissionType.setEditable(false);
+                break;
+            case MissionCreate.INSTRUCTIONAL:
+                txfMissionType.setText("Instructional");
+                txfMissionType.setEditable(false);
+                break;
+            case MissionCreate.ATHLETICS:
+                txfMissionType.setText("Athletics");
+                txfMissionType.setEditable(false);
+                break;
+            case MissionCreate.CULTURAL:
+                txfMissionType.setText("Cultural");
+                txfMissionType.setEditable(false);
+                break;
+            case MissionCreate.OTHERS:
+                txfMissionType.clear();
+                txfMissionType.setEditable(true);
+                break;
+            default:                
+                txfMissionType.clear();
+                txfMissionType.setEditable(false);
+        }
     }
     
     public int getTypeSel(){

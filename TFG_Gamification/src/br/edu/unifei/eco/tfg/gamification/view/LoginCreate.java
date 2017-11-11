@@ -48,7 +48,7 @@ public class LoginCreate extends TemplateForm{
           createListEntry("Computer Engineering", "ECO"),
           createListEntry("Control and Automation Engineering", "ECA"),
           createListEntry("Electrical Engineering", "EEL"),
-          createListEntry("Electronic", "ELT"),
+          createListEntry("Electronic Engineering", "ELT"),
           createListEntry("Mechanical Engineering", "EME"),
           createListEntry("Material Engineering", "EMA"),
           createListEntry("Industrial Engineering", "EPR"));

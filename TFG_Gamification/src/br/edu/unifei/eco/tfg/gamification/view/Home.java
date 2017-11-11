@@ -81,7 +81,9 @@ public class Home extends TemplateForm{
         this.add(tabLyt.createConstraint().horizontalAlign(CENTER).verticalAlign(CENTER).widthPercentage(33).heightPercentage(20).verticalSpan(2),lblUserPhoto)
             .add(tabLyt.createConstraint().horizontalAlign(CENTER).verticalAlign(BOTTOM).widthPercentage(66).heightPercentage(10).horizontalSpan(2),lblUserName)
             .add(tabLyt.createConstraint().horizontalAlign(CENTER).verticalAlign(TOP).widthPercentage(66).heightPercentage(10).horizontalSpan(2),lblUserScore);
-        mainAchievements.set(1, mainAchievements.get(1).scaledWidth(190));
+        mainAchievements.set(0, mainAchievements.get(0).scaledWidth(150));
+        mainAchievements.set(1, mainAchievements.get(1).scaledWidth(200));
+        mainAchievements.set(2, mainAchievements.get(2).scaledWidth(150));
         for (Image achievement : mainAchievements){
             Label lblAux = new Label(achievement);
             lblAux.getStyle().setAlignment(Component.CENTER);
@@ -107,7 +109,7 @@ public class Home extends TemplateForm{
         //Houses images
         width = 150;
         try {
-            Image houses = Image.createImage("/4houses.jpg").scaled(2*width,2*width);
+            Image houses = Image.createImage("/Clans.png").scaled(2*width,2*width);
             Image roundSquareMask = Image.createImage("/#sqrMask.png").scaled(width,width);
             mask = roundSquareMask.createMask();
             imgHouses[0] = houses.subImage(0, 0, width, width, false);
