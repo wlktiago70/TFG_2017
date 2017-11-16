@@ -5,6 +5,8 @@
  */
 package br.edu.unifei.eco.tfg.gamification.model;
 
+import com.j256.ormlite.field.DatabaseField;
+import com.j256.ormlite.table.DatabaseTable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,12 +14,17 @@ import java.util.List;
  *
  * @author Paulo
  */
+@DatabaseTable(tableName = "Goal")
 public abstract class Goal {
-    
+    @DatabaseField()
     private String description;         //descricao do objetivo
+    @DatabaseField()
     private boolean finished;           //indica se a meta foi cumprida
+    @DatabaseField()
     private List<Request> requests = new ArrayList<Request>();  //Requisiçoes para validar a goal
+    @DatabaseField()
     private final Quest quest;
+    @DatabaseField()
     private List<Player> finishedPlayers;
     
     

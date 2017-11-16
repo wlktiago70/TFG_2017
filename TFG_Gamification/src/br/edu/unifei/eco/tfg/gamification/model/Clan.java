@@ -5,6 +5,8 @@
  */
 package br.edu.unifei.eco.tfg.gamification.model;
 
+import com.j256.ormlite.field.DatabaseField;
+import com.j256.ormlite.table.DatabaseTable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,7 +14,10 @@ import java.util.List;
  *
  * @author Paulo
  */
+
+@DatabaseTable(tableName = "clans")
 public class Clan extends Group {
+    @DatabaseField(foreign = true)
     private List<Player> members = new ArrayList<Player>();
     
     

@@ -5,12 +5,16 @@
  */
 package br.edu.unifei.eco.tfg.gamification.model;
 
+import com.j256.ormlite.field.DatabaseField;
+import com.j256.ormlite.table.DatabaseTable;
+
 /**
  *
  * @author Paulo
  */
+@DatabaseTable(tableName = "experience")
 public class Experience extends Reward{
-    
+    @DatabaseField()
     private final double amount;
 
     public Experience(double amount) {

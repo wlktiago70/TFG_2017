@@ -5,6 +5,8 @@
  */
 package br.edu.unifei.eco.tfg.gamification.model;
 
+import com.j256.ormlite.field.DatabaseField;
+import com.j256.ormlite.table.DatabaseTable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,10 +14,15 @@ import java.util.List;
  *
  * @author Paulo
  */
+@DatabaseTable(tableName = "clanAssigment")
 public class ClanAssignment {
+    @DatabaseField(foreign = true)
     private List<Clan> clans;
+    @DatabaseField(foreign = true)
     private Player player;
+    @DatabaseField()
     private List<Question> questions;
+    @DatabaseField()
     private int scores[];
    
 

@@ -5,13 +5,20 @@
  */
 package br.edu.unifei.eco.tfg.gamification.model;
 
+import com.j256.ormlite.field.DatabaseField;
+import com.j256.ormlite.table.DatabaseTable;
+
 /**
  *
  * @author Paulo
  */
+@DatabaseTable(tableName = "request")
 public class Request {
+    @DatabaseField()
     private Player maker;
+    @DatabaseField()
     private Quest quest;
+    @DatabaseField()
     private Goal goal;
 
     public Request(Player maker, Quest quest, Goal goal) {

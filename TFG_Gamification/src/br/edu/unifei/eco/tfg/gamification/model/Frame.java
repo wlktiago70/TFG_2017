@@ -5,12 +5,16 @@
  */
 package br.edu.unifei.eco.tfg.gamification.model;
 
+import com.j256.ormlite.field.DatabaseField;
+import com.j256.ormlite.table.DatabaseTable;
+
 /**
  *
  * @author Paulo
  */
+@DatabaseTable(tableName = "Frame")
 public class Frame extends Reward{
-    
+    @DatabaseField()
     private String name;         //nome especifico do item
 
     public Frame(String name, String description, int rarity) {

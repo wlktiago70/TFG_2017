@@ -5,12 +5,16 @@
  */
 package br.edu.unifei.eco.tfg.gamification.model;
 
+import com.j256.ormlite.field.DatabaseField;
+import com.j256.ormlite.table.DatabaseTable;
+
 /**
  *
  * @author Paulo
  */
+@DatabaseTable(tableName = "medal")
 public class Medal extends Reward{
-    
+    @DatabaseField()
     private final String name;         //nome especifico do item
 
     public Medal(String name, String description, int rarity) {

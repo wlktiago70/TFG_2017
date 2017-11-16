@@ -5,13 +5,17 @@
  */
 package br.edu.unifei.eco.tfg.gamification.model;
 
+import com.j256.ormlite.field.DatabaseField;
+
 /**
  *
  * @author Paulo
  */
+
 public abstract class Group {
-    
+    @DatabaseField(id = true)
     private String name;                    //nome do grupo
+    @DatabaseField(canBeNull = true)
     private String description;             //breve descriçao do grupo
 
     

@@ -5,6 +5,8 @@
  */
 package br.edu.unifei.eco.tfg.gamification.model;
 
+import com.j256.ormlite.field.DatabaseField;
+import com.j256.ormlite.table.DatabaseTable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,7 +14,9 @@ import java.util.List;
  *
  * @author Paulo
  */
+@DatabaseTable(tableName = "manualValidation")
 public class ManualValidation extends Goal {
+    @DatabaseField()
     private List<Player> sensors = new ArrayList<Player>();     //jogadores que podem validar a quest
 
     public ManualValidation(String description, Quest quest) {

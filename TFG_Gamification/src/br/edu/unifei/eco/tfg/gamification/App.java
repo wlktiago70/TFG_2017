@@ -34,12 +34,30 @@ public class App {
     
     public void start(){
         List<Image> list = new ArrayList<>();
+        /*
         for(int i=0;i<3;i++){
             try {
                 list.add(Image.createImage("/img.png").scaled(75,75));
             } catch (IOException ex) {
             }
         }
+        */
+        try {
+            list.add(Image.createImage("/CulturalSilver.png").scaled(75, 75));
+            } catch (IOException ex) {
+        }
+        
+        try {
+            list.add(Image.createImage("/InstructionalBronze.png").scaled(75, 75));
+            } catch (IOException ex) {
+        }
+        
+        try {
+            list.add(Image.createImage("/CulturalSilver.png").scaled(75, 75));
+            } catch (IOException ex) {
+        }
+        
+        
         if(current != null){
             current.show();
             return;

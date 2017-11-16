@@ -5,6 +5,8 @@
  */
 package br.edu.unifei.eco.tfg.gamification.model;
 
+import com.j256.ormlite.field.DatabaseField;
+import com.j256.ormlite.table.DatabaseTable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,11 +14,17 @@ import java.util.List;
  *
  * @author Paulo
  */
+@DatabaseTable(tableName = "question4")
 public class Question4Answers implements Question {
+    @DatabaseField()
     private final String text;
+    @DatabaseField()
     private int scores[];
+    @DatabaseField()
     private boolean answered;
+    @DatabaseField()
     private List<String> answers;
+    @DatabaseField()
     private List<int[]> points;
     
     

@@ -5,6 +5,8 @@
  */
 package br.edu.unifei.eco.tfg.gamification.model;
 
+import com.j256.ormlite.field.DatabaseField;
+import com.j256.ormlite.table.DatabaseTable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,13 +14,19 @@ import java.util.List;
  *
  * @author Paulo
  */
+@DatabaseTable(tableName = "party")
 public class Party extends Group {
-    
+    @DatabaseField()
     private Player creator;                                     //criador da equipe
+    @DatabaseField()
     private SideQuest sideQuest;                               //SQ que a equipe esta participando
+    @DatabaseField()
     private List<Player> members = new ArrayList<Player>();
+    @DatabaseField()
     private List<Player> requests;
+    @DatabaseField()
     private List<Player> invites;
+    @DatabaseField()
     private boolean active;
 
     public Party(String name, String description, Player creator, SideQuest sideQuest) {

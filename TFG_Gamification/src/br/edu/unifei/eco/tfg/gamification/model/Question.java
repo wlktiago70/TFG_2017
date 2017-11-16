@@ -5,15 +5,18 @@
  */
 package br.edu.unifei.eco.tfg.gamification.model;
 
+import com.j256.ormlite.field.DatabaseField;
+import com.j256.ormlite.table.DatabaseTable;
 import java.util.List;
 
 /**
  *
  * @author Paulo
  */
+
 public interface Question {
     
-    
+
     public String getText();
     
     public int[] getScores();

@@ -5,16 +5,22 @@
  */
 package br.edu.unifei.eco.tfg.gamification.model;
 
+import com.j256.ormlite.field.DatabaseField;
+import com.j256.ormlite.table.DatabaseTable;
 import java.util.List;
 
 /**
  *
  * @author Paulo
  */
+@DatabaseTable(tableName = "sideQuest")
 public class SideQuest extends Quest {
     
+    @DatabaseField()
     private Player creator;             //criador da SQ
+    @DatabaseField()
     private Party participatingPartys;  //partys que estao participando da SQ
+    @DatabaseField()
     private ClassificationEnum classification;   //classificaçao quanto ao tipo da SQ
 
     

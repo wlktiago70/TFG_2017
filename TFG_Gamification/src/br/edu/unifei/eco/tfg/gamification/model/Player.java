@@ -5,6 +5,8 @@
  */
 package br.edu.unifei.eco.tfg.gamification.model;
 
+import com.j256.ormlite.field.DatabaseField;
+import com.j256.ormlite.table.DatabaseTable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,22 +15,37 @@ import java.util.List;
  *
  * @author Paulo
  */
+@DatabaseTable(tableName = "player")
 public class Player {
-    
+    @DatabaseField()
     private String name;                                                    //nome do usuario
+    @DatabaseField()
     private int level;                                                      //lvl do player
+    @DatabaseField()
     private float experience;                                               //quantidade de xp que o usuario possui
+    @DatabaseField()
     private float reputation;                                               //reputaçao que usuario adiquiriu ao criar SQ e Party
+    @DatabaseField()
     private List<List<Goal>> questGoals;                                    //Todas as metas que o jogador tem a cumprir
+    @DatabaseField()
     private List<Reward> rewardsOwned;                                      //lista de recompensas conseguidas em Quests, menos exp(valor total adicionado em experience)
+    @DatabaseField()
     private List<Reward> rewardsAvailable;                                  //lista de recompensas desbloquadas para oferecer na SQ (incluindo quantidade fixa de xp - )
+    @DatabaseField()
     private PlayerPerformance performance;                                  //a performance geral do jogador
+    @DatabaseField()
     private List<Goal> sensoringGoals;                                      //Objetivos que o jogador pode validar
+    @DatabaseField()
     private List<Player> friends = new ArrayList<Player>();                 //lista de amigos
+    @DatabaseField()
     private List<Quest> questsJoined = new ArrayList<Quest>();              //quests ativas para o usuario(num max definido pelos privilegios)
+    @DatabaseField()
     private List<SideQuest> createdSQ = new ArrayList<SideQuest>();         //as quests que o player criou
+    @DatabaseField()
     private List<Party> createdPaties = new ArrayList<Party>();             //as partys que o player criou
+    @DatabaseField()
     private PlayerOcupationEnum ocupation;                                  //definicçao do que o jogador faz no ambiente academico
+    @DatabaseField()
     private Party party;                                                    //equipe que o jogador participa
         
     private Clan clan;                                                              //clan do jogador
